@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { createPortal } from 'react-dom';
+import { useNavigate } from 'react-router-dom';
 
 const initialForm = {
   fullName: '',
@@ -43,6 +44,7 @@ const formatPhone = (value) => {
 };
 
 export default function DemoModal({ isOpen, onClose }) {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState(initialForm);
   const [touched, setTouched] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -145,9 +147,8 @@ export default function DemoModal({ isOpen, onClose }) {
         throw new Error('Submission failed. Please try again.');
       }
 
-      setSuccessMessage('Thanks! Our team will reach out within 24 hours.');
-      setFormData(initialForm);
-      setTouched({});
+      onClose();
+      navigate('/thank-you');
     } catch (error) {
       setErrorMessage(error?.message || 'Something went wrong. Please try again.');
     } finally {

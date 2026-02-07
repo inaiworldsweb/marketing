@@ -19,14 +19,14 @@ export default function AnimatedDotWaveBackground() {
 
         // Configuration - matching the subtle dot pattern from reference
         const config = {
-            dotSpacing: 20,              // Grid spacing between dots
-            dotBaseRadius: 1.0,          // Minimum dot radius
-            dotMaxRadius: 1.8,           // Maximum dot radius at wave peak
-            waveSpeed: 0.008,            // Very slow, subtle animation
-            waveFrequency: 0.008,        // Low frequency for gentle waves
-            backgroundColor: '#08080f',  // Deep dark background
-            dotBaseAlpha: 0.12,          // Base dot opacity (very subtle)
-            dotMaxAlpha: 0.35,           // Max dot opacity at wave peak
+            dotSpacing: 20,
+            dotBaseRadius: 1.0,
+            dotMaxRadius: 1.8,
+            waveSpeed: 0.008,
+            waveFrequency: 0.008,
+            backgroundColor: '#08080f',
+            dotBaseAlpha: 0.12,
+            dotMaxAlpha: 0.35,
         };
 
         // Resize handler

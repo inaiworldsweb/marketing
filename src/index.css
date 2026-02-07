@@ -1,1 +1,318 @@
 @import "tailwindcss";
+
+/* Smooth scrolling and performance optimizations */
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Smooth scroll for the entire page */
+.smooth-scroll {
+    scroll-behavior: smooth;
+}
+
+/* Optimize images */
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Performance optimizations */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Animation performance */
+.animate {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* Optimize transitions */
+a,
+button,
+.transition-all {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Optimize font loading */
+@layer base {
+    body {
+        @apply text-gray-900 bg-white;
+        font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1, 'pnum' 1, 'tnum' 0, 'onum' 1, 'lnum' 1, 'dlig' 1;
+    }
+}
+
+/* Optimize focus states */
+*:focus {
+    @apply outline-none ring-2 ring-blue-500/50;
+}
+
+/* Optimize selection */
+::selection {
+    @apply bg-blue-600 text-white;
+}
+
+/* Rotating border animation for challenge items */
+.challenge-item {
+    position: relative;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03), transparent);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.challenge-item::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: conic-gradient(from 0deg,
+            transparent 0deg,
+            transparent 60deg,
+            rgba(59, 130, 246, 0.8) 90deg,
+            rgba(147, 197, 253, 1) 120deg,
+            rgba(59, 130, 246, 0.8) 150deg,
+            transparent 180deg,
+            transparent 360deg);
+    border-radius: 0.625rem;
+    opacity: 0;
+    z-index: -2;
+    transition: opacity 0.3s ease;
+}
+
+.challenge-item::after {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.85));
+    border-radius: 0.45rem;
+    z-index: -1;
+}
+
+.challenge-item:hover::before {
+    opacity: 1;
+    animation: rotate-border 2s linear infinite;
+}
+
+.challenge-item:hover {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.15), 0 0 40px rgba(59, 130, 246, 0.05);
+}
+
+@keyframes rotate-border {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Step card rotating border animation */
+@keyframes border-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-border-spin {
+    animation: border-spin 3s linear infinite;
+}
+
+/* SVG path animation */
+.path-animation {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: draw-path 3s ease-in-out infinite alternate;
+}
+
+@keyframes draw-path {
+    0% {
+        stroke-dashoffset: 1500;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Animation delays */
+.animation-delay-500 {
+    animation-delay: 0.5s;
+}
+
+.animation-delay-1000 {
+    animation-delay: 1s;
+}
+
+/* Step card styles */
+.step-card {
+    min-height: 120px;
+}
+
+.step-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 1rem;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+/* Feature section animations */
+.feature-section {
+    position: relative;
+}
+
+.feature-item {
+    position: relative;
+    padding: 8px 0;
+}
+
+.feature-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(to right, rgba(59, 130, 246, 0.5), transparent);
+    transition: width 0.3s ease;
+}
+
+.feature-item:hover::after {
+    width: 100%;
+}
+
+/* Connector line glow animation */
+.connector-line {
+    transition: all 0.3s ease;
+}
+
+.feature-section:hover~svg .connector-line,
+.connector-line:hover {
+    stroke: rgba(59, 130, 246, 0.4);
+    filter: drop-shadow(0 0 4px rgba(59, 130, 246, 0.3));
+}
+
+/* Center box pulse on hover */
+.center-box {
+    transition: all 0.3s ease;
+}
+
+.center-box:hover {
+    stroke: rgba(59, 130, 246, 0.5);
+    filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.3));
+}
+
+/* Animated center box with rotating border */
+.center-box-animated {
+    filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.4));
+}
+
+/* Vertical line flow animations */
+.line-flow-down {
+    animation: flow-down 3s ease-in-out infinite;
+}
+
+.line-flow-down-2 {
+    animation: flow-down 3s ease-in-out infinite;
+    animation-delay: 0.8s;
+}
+
+@keyframes flow-down {
+    0% {
+        stroke-dashoffset: 50;
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        opacity: 0;
+    }
+}
+
+/* Center box flow animation */
+.center-box-flow {
+    animation: box-flow 4s ease-in-out infinite;
+    animation-delay: 0.4s;
+}
+
+@keyframes box-flow {
+    0% {
+        stroke-dashoffset: 360;
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.6;
+    }
+
+    80% {
+        opacity: 0.6;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        opacity: 0;
+    }
+}
+
+/* Branch line flow animations */
+.line-flow-left {
+    animation: flow-branch 3s ease-in-out infinite;
+    animation-delay: 1.2s;
+}
+
+.line-flow-right {
+    animation: flow-branch 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes flow-branch {
+    0% {
+        stroke-dashoffset: 300;
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.8;
+    }
+
+    85% {
+        opacity: 0.8;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        opacity: 0;
+    }
+}

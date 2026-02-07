@@ -1,6 +1,27 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 export default function ThankYou() {
+    const navigate = useNavigate();
+    const [countdown, setCountdown] = useState(10);
+
+    useEffect(() => {
+        // Countdown timer
+        const timer = setInterval(() => {
+            setCountdown((prev) => {
+                if (prev <= 1) {
+                    clearInterval(timer);
+                    navigate('/');
+                    return 0;
+                }
+                return prev - 1;
+            });
+        }, 1000);
+
+        // Cleanup on unmount
+        return () => clearInterval(timer);
+    }, [navigate]);
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-[#030508] via-[#0a0f1a] to-[#030508] flex items-center justify-center px-4">
             {/* Background Glow Effects */}
@@ -42,9 +63,15 @@ export default function ThankYou() {
                 <p className="text-lg text-white/60 mb-3">
                     We've received your demo request.
                 </p>
-                <p className="text-base text-white/50 mb-10">
+                <p className="text-base text-white/50 mb-4">
                     Our team will reach out to you within{' '}
                     <span className="text-blue-400 font-medium">24 hours</span>.
+                </p>
+
+                {/* Auto-redirect countdown */}
+                <p className="text-sm text-white/40 mb-8">
+                    Redirecting to home in{' '}
+                    <span className="text-blue-400 font-semibold">{countdown}</span> seconds...
                 </p>
 
                 {/* Back to Home Button */}

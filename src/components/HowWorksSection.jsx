@@ -218,7 +218,7 @@ const steps = [
 
 const HowWorksSection = () => {
   return (
-    <section className="bg-black text-white relative overflow-hidden py-16 px-4 sm:px-8">
+    <section className="bg-black text-white relative overflow-hidden py-8 px-4 sm:px-8">
       {/* Background patterns */}
       <div className="absolute inset-0 pointer-events-none">
         <div

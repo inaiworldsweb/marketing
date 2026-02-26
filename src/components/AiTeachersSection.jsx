@@ -26,7 +26,7 @@ const teachers = [
 
 const AiTeachersSection = () => {
   return (
-    <section id="learning-flow" className="bg-black text-white py-6 px-4 sm:px-8">
+    <section id="learning-flow" className="bg-black text-white py-8 px-4 sm:px-8">
       <div className="max-w-6xl mx-auto text-center space-y-10">
         <div>
           <h2 className="text-3xl sm:text-4xl font-bold">Meet Our AI Teachers</h2>

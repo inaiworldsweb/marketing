@@ -38,7 +38,7 @@ const cards = [
 
 const EducationTypesSection = ({ onBookDemo }) => {
   return (
-    <section className="bg-black text-white relative overflow-hidden pt-8 pb-16 px-6">
+    <section className="bg-black text-white relative overflow-hidden py-8 px-6">
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute inset-0 opacity-10"

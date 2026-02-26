@@ -9,7 +9,7 @@ const VideoSection = () => {
   };
 
   return (
-    <section id="watch-demo" className="w-full bg-black py-6 px-4">
+    <section id="watch-demo" className="w-full bg-black py-8 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="flex flex-col items-center text-center">
           {/* Heading Section */}

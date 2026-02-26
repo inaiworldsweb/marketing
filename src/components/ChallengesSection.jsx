@@ -12,7 +12,7 @@ const items = [
 
 const ChallengesSection = () => {
   return (
-    <section className="bg-black text-white relative overflow-hidden py-6 px-6">
+    <section className="bg-black text-white relative overflow-hidden py-8 px-6">
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute inset-0 opacity-15"

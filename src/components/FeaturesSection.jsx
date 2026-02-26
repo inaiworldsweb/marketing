@@ -133,7 +133,7 @@ const features = [
 
 const FeaturesSection = ({ onBookDemo }) => {
   return (
-    <section className="bg-black text-white relative overflow-hidden py-16 px-4 sm:px-8">
+    <section className="bg-black text-white relative overflow-hidden py-8 px-4 sm:px-8">
       <div className="absolute inset-0 pointer-events-none opacity-15" style={{
         backgroundImage: `radial-gradient(circle, #444 1px, transparent 1px)`,
         backgroundSize: '15px 15px',

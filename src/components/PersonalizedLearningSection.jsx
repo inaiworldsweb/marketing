@@ -52,7 +52,7 @@ const features = [
 
 const PersonalizedLearningSection = () => {
   return (
-    <section className="bg-gradient-to-br from-gray-900 to-black text-white py-6 px-4 sm:px-6 lg:px-8">
+    <section className="bg-gradient-to-br from-gray-900 to-black text-white py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold sm:text-4xl mb-4">

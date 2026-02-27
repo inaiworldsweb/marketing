@@ -38,7 +38,7 @@ const cards = [
 
 const EducationTypesSection = ({ onBookDemo }) => {
   return (
-    <section className="bg-black text-white relative overflow-hidden py-8 px-6">
+    <section className="bg-black text-white relative overflow-hidden py-6 sm:py-8 px-4 sm:px-6">
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute inset-0 opacity-10"
@@ -79,7 +79,7 @@ const EducationTypesSection = ({ onBookDemo }) => {
               </ul>
               <button
                 onClick={onBookDemo}
-                className="mt-6 min-h-[44px] self-start rounded-full bg-blue-500 px-5 py-2.5 text-xs font-semibold text-white shadow-[0_0_25px_rgba(59,130,246,0.45)] transition hover:bg-blue-900"
+              className="mt-6 min-h-[44px] self-start rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 px-5 py-2.5 text-xs font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.5)] transition"
               >
                 Book a Demo
               </button>

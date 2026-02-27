@@ -24,18 +24,18 @@ const cards = [
 
 const EdInaiSection = () => {
   return (
-    <section id="ai-teachers" className="bg-[#080810] text-white relative overflow-hidden py-20 px-4 sm:px-8">
+    <section id="ai-teachers" className="bg-[#080810] text-white relative overflow-hidden py-12 sm:py-20 px-4 sm:px-8">
       {/* Dot pattern background */}
       <div className="absolute inset-0 pointer-events-none" style={{
         backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px)`,
         backgroundSize: '24px 24px',
       }} />
 
-      <div className="relative max-w-6xl mx-auto text-center space-y-16">
+      <div className="relative max-w-6xl mx-auto text-center space-y-8 sm:space-y-16">
         <div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">What is Ed-INAI?</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">What is edInai?</h2>
           <p className="mt-4 text-base sm:text-lg text-white/60 max-w-3xl mx-auto leading-relaxed">
-            Ed-INAI is an advanced AI-powered education platform developed to transform traditional classrooms into
+            edInai is an advanced AI-powered education platform developed to transform traditional classrooms into
             intelligent, interactive learning environments.
           </p>
         </div>

@@ -319,7 +319,7 @@ export default function DemoModal({ isOpen, onClose }) {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-blue-500 px-8 py-3 text-sm font-semibold text-white shadow-lg transition disabled:cursor-not-allowed disabled:opacity-60"
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 px-8 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.5)] transition disabled:cursor-not-allowed disabled:opacity-60"
             >
               {isSubmitting ? 'Submitting...' : 'Request a Demo'}
             </button>

@@ -31,7 +31,7 @@ const ImplementationSection = () => {
   const [hoveredStep, setHoveredStep] = useState(null);
 
   return (
-    <section id="dashboard-preview" className="relative overflow-hidden py-20 px-4 sm:px-8 bg-black">
+    <section id="dashboard-preview" className="relative overflow-hidden py-12 sm:py-20 px-4 sm:px-8 bg-black">
       {/* Dot pattern background on right */}
       <div className="absolute right-0 top-0 w-1/3 h-full pointer-events-none opacity-30">
         <div
@@ -48,8 +48,8 @@ const ImplementationSection = () => {
           <span className="inline-block px-4 py-1.5 text-xs font-medium text-blue-300 bg-blue-900/30 rounded-full border border-blue-500/20">
             Implementation Process
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100">
-            How to Get Started with <span className="text-blue-400">Ed-INAI</span>?
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+            How to Get Started with <span className="bg-gradient-to-r from-blue-200 via-blue-300 to-blue-500 bg-clip-text text-transparent">edInai</span>?
           </h2>
           <p className="text-base sm:text-lg text-white/80 max-w-3xl mx-auto">
             Fast, Simple, and Seamless Integration for Educational Institutions
@@ -107,7 +107,7 @@ const ImplementationSection = () => {
 
                     {/* Content */}
                     <div className="relative z-10">
-                      <h3 className="text-blue-400 font-semibold text-sm mb-3 tracking-wide">
+                      <h3 className="text-white font-semibold text-sm mb-3 tracking-wide">
                         {title}
                       </h3>
                       <p className="text-white/80 text-sm leading-relaxed">

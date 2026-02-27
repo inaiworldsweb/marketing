@@ -133,7 +133,7 @@ const features = [
 
 const FeaturesSection = ({ onBookDemo }) => {
   return (
-    <section className="bg-black text-white relative overflow-hidden py-8 px-4 sm:px-8">
+    <section className="bg-black text-white relative overflow-hidden py-6 sm:py-8 px-4 sm:px-8">
       <div className="absolute inset-0 pointer-events-none opacity-15" style={{
         backgroundImage: `radial-gradient(circle, #444 1px, transparent 1px)`,
         backgroundSize: '15px 15px',
@@ -176,7 +176,7 @@ const FeaturesSection = ({ onBookDemo }) => {
           <div className="mt-8">
             <button
               onClick={onBookDemo}
-              className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-blue-600 to-blue-500 px-8 py-4 text-sm font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:from-blue-500 hover:to-blue-400"
+              className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 px-8 py-4 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.5)] hover:shadow-[0_15px_40px_rgba(59,130,246,0.6)] transition-all duration-300"
             >
               <span className="relative z-10">Book a Demo</span>
             </button>

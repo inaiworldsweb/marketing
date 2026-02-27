@@ -32,7 +32,7 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="bg-black text-white py-12 px-6">
+    <section className="bg-black text-white py-8 sm:py-12 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
         {/* Left content */}
         <div className="flex justify-center items-center">
@@ -60,16 +60,14 @@ export default function FAQSection() {
             return (
               <div
                 key={index}
-                className="group bg-gradient-to-r from-[#0b0b0b] to-[#111827] rounded-xl border border-gray-700/50 hover:border-blue-500/50 hover:shadow-[0_8px_30px_rgba(59,130,246,0.15)] hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 ease-out cursor-pointer"
-                onMouseEnter={() => setOpenIndex(index)}
-                onMouseLeave={() => setOpenIndex(null)}
+                className="bg-gradient-to-r from-[#0b0b0b] to-[#111827] rounded-xl border border-gray-700/50 transition-all duration-300 ease-out cursor-pointer"
                 onClick={() => setOpenIndex(isOpen ? null : index)}
               >
                 <div className="w-full flex items-center justify-between px-6 py-5 text-left">
-                  <span className="font-medium text-sm md:text-base text-gray-200 group-hover:text-white transition-colors duration-300">
+                  <span className={`font-medium text-sm md:text-base transition-colors duration-300 ${isOpen ? 'text-white' : 'text-gray-200'}`}>
                     {faq.question}
                   </span>
-                  <span className={`text-xl text-gray-400 group-hover:text-blue-400 transition-all duration-300 ${isOpen ? 'rotate-45' : 'rotate-0'}`}>
+                  <span className={`text-xl transition-all duration-300 ${isOpen ? 'text-blue-400 rotate-45' : 'text-gray-400 rotate-0'}`}>
                     +
                   </span>
                 </div>
@@ -78,7 +76,7 @@ export default function FAQSection() {
                   className={`overflow-hidden transition-all duration-300 ease-out ${isOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
                     }`}
                 >
-                  <div className="px-6 pb-5 text-gray-400 group-hover:text-gray-300 text-sm leading-relaxed transition-colors duration-300">
+                  <div className="px-6 pb-5 text-gray-300 text-sm leading-relaxed">
                     {faq.answer}
                   </div>
                 </div>

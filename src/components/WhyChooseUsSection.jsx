@@ -22,7 +22,7 @@ const HeroSection = ({ onBookDemo }) => {
 
         <button
           onClick={onBookDemo}
-          className="mt-8 min-h-[44px] px-6 py-3 rounded-full bg-blue-600 hover:bg-blue-700 transition text-white font-medium shadow-lg"
+          className="mt-8 min-h-[44px] px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 transition text-white font-medium shadow-[0_10px_30px_rgba(59,130,246,0.5)]"
         >
           Book Your Demo Now
         </button>

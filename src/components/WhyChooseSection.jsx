@@ -30,7 +30,7 @@ const highlights = [
 
 const WhyChooseSection = ({ onBookDemo }) => {
   return (
-    <section className="bg-black text-white relative overflow-hidden pt-16 pb-8 px-6">
+    <section className="bg-black text-white relative overflow-hidden pt-10 sm:pt-16 pb-6 sm:pb-8 px-4 sm:px-6">
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute inset-0 opacity-10"
@@ -44,16 +44,16 @@ const WhyChooseSection = ({ onBookDemo }) => {
       </div>
 
       <div className="relative max-w-6xl mx-auto">
-        <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-black/70 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] px-6 sm:px-10 py-12">
+        <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-black/70 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] px-4 sm:px-10 py-8 sm:py-12">
           <div className="text-center">
-            <div className="flex items-center justify-center gap-2">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
+              <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-center">
                 Why Institutions Choose
               </h2>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-500">ED-INAI</h2>
+              <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-blue-500">edInai</h2>
             </div>
             <p className="mt-2 text-xs sm:text-sm text-white/70">
-              ED-INAI is designed to deliver measurable academic and operational impact.
+              edInai is designed to deliver measurable academic and operational impact.
             </p>
           </div>
 
@@ -82,7 +82,7 @@ const WhyChooseSection = ({ onBookDemo }) => {
           <div className="mt-10 flex justify-center">
             <button
               onClick={onBookDemo}
-              className="min-h-[44px] rounded-full bg-blue-500 px-6 py-2.5 text-sm font-semibold text-white shadow-[0_0_25px_rgba(59,130,246,0.45)] transition hover:bg-blue-900"
+              className="min-h-[44px] rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 px-6 py-2.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.5)] transition"
             >
               Book a Demo
             </button>

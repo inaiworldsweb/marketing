@@ -3,7 +3,7 @@ import logo from '../assets/EDINAI Logo (1).png';
 
 const Footer = ({ onBookDemo }) => {
     return (
-        <footer className="relative w-full bg-black border-t border-white/10 py-8">
+        <footer className="relative w-full bg-black border-t border-white/10 py-6 sm:py-8">
             <div className="max-w-[1050px] mx-auto px-4 flex flex-col gap-6">
 
                 {/* Top Row - Logo (Left) and Students Section (Right) */}
@@ -38,7 +38,7 @@ const Footer = ({ onBookDemo }) => {
                 <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6">
                     <button
                         onClick={onBookDemo}
-                        className="min-h-[44px] rounded-full border border-blue-500/40 bg-blue-500/10 px-6 py-2.5 text-sm font-semibold text-blue-200 transition hover:border-blue-400 hover:bg-blue-500/20"
+                        className="min-h-[44px] rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 px-6 py-2.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.5)] transition"
                     >
                         Book a Demo
                     </button>

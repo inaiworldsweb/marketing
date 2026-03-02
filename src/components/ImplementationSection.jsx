@@ -49,7 +49,7 @@ const ImplementationSection = () => {
             Implementation Process
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-            How to Get Started with <span className="bg-gradient-to-r from-blue-200 via-blue-300 to-blue-500 bg-clip-text text-transparent">edInai</span>?
+            How to Get Started with <span className="bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent">edInai</span>?
           </h2>
           <p className="text-base sm:text-lg text-white/80 max-w-3xl mx-auto">
             Fast, Simple, and Seamless Integration for Educational Institutions

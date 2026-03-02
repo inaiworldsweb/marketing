@@ -50,7 +50,9 @@ const WhyChooseSection = ({ onBookDemo }) => {
               <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-center">
                 Why Institutions Choose
               </h2>
-              <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-blue-500">edInai</h2>
+              <h2 className="text-xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent">
+  edInai
+</h2>
             </div>
             <p className="mt-2 text-xs sm:text-sm text-white/70">
               edInai is designed to deliver measurable academic and operational impact.

@@ -234,7 +234,7 @@ const HowWorksSection = () => {
 
       <div className="relative max-w-6xl mx-auto text-center space-y-12">
         <div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">How ED-INAI Works</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">How edInai Works</h2>
           <p className="mt-4 text-sm sm:text-base text-white/60">Simple setup. Powerful results.</p>
         </div>
 

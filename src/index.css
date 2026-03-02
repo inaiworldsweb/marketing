@@ -12,6 +12,9 @@ html {
 .smooth-scroll {
     scroll-behavior: smooth;
 }
+body{
+    letter-spacing: 1px;
+}
 
 /* Optimize images */
 img {

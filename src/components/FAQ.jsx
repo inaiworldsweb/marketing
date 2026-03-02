@@ -2,17 +2,17 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: " Is Ed-INAI a replacement for teachers?",
+    question: " Is edInai a replacement for teachers?",
     answer:
       "No. Ed-INAI supports teachers by automating repetitive teaching tasks and enablingscale.",
   },
   {
-    question: " Can Ed-INAI teach any subject?",
+    question: " Can edInai teach any subject?",
     answer:
       "Yes. It can be trained on any syllabus or subject across academic and professional streams.",
   },
   {
-    question: " Is Ed-INAI available in multiple languages?",
+    question: " Is edInai available in multiple languages?",
     answer:
       "Yes. The platform supports multilingual teaching.",
   },
@@ -37,7 +37,9 @@ export default function FAQSection() {
         {/* Left content */}
         <div className="flex justify-center items-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-2">
-            Frequently Asked <br /> <span className="flex justify-center items-center text-blue-400">Questions</span>
+            Frequently Asked <br /><span className="flex justify-center items-center bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent">
+  Questions
+</span>
           </h2>
           {/* <h2 className="text-3xl md:text-4xl font-bold mb-2">
             Frequently Asked

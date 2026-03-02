@@ -145,7 +145,7 @@ const FeaturesSection = ({ onBookDemo }) => {
             Virtual AI Teaching Platform Built for Modern Institutions
           </h2>
           <p className="mt-4 text-base sm:text-lg text-white/90 max-w-4xl mx-auto leading-relaxed">
-            ED-INAI is an AI-powered virtual teaching platform where intelligent AI teachers conduct live and recorded
+            edInai is an AI-powered virtual teaching platform where intelligent AI teachers conduct live and recorded
             interactive lectures, handle student doubts, and track performance — automatically.
           </p>
         </div>

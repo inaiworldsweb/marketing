@@ -17,7 +17,7 @@ const HeroSection = ({ onBookDemo }) => {
         </h1>
 
         <p className="mt-4 text-gray-400 text-sm md:text-base max-w-xl">
-          Experience the future of teaching with ED-INAI.
+          Experience the future of teaching with edInai.
         </p>
 
         <button

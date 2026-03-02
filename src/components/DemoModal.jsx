@@ -168,7 +168,7 @@ export default function DemoModal({ isOpen, onClose }) {
         <div className="flex items-center justify-between border-b border-white/10 px-6 py-4">
           <div>
             <p className="text-sm uppercase tracking-[0.3em] text-white/60">Book a demo</p>
-            <h2 className="text-2xl font-semibold">Let us tailor ED-INAI for your institution</h2>
+            <h2 className="text-2xl font-semibold">Let us tailor edInai for your institution</h2>
           </div>
           <button
             type="button"

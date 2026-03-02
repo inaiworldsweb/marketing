@@ -39,7 +39,7 @@ const ImplementationStepsSection = () => {
                 {/* Header */}
                 <div className="text-center mb-16">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-                        How to Implement Ed-INAI?
+                        How to Implement edInai?
                     </h2>
                     <p className="text-gray-400 text-sm sm:text-base">
                         Fast, Simple, Institution-Friendly Deployment

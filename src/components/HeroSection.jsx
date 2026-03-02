@@ -36,7 +36,7 @@ const HeroSection = () => {
           </div>
 
           <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-            Ed-INAI introduces Virtual AI Teachers that conduct live & recorded interactive classes, answer
+            edInai introduces Virtual AI Teachers that conduct live & recorded interactive classes, answer
             student doubts instantly, and adapt to every learning style - 24x7, without fatigue.
           </p>
 

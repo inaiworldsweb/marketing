@@ -57,7 +57,7 @@ const EducationTypesSection = ({ onBookDemo }) => {
             Designed for Every Type of Educational Institution
           </h2>
           <p className="mt-2 text-xs sm:text-sm text-white/70">
-            Whether you run a school, college, or coaching institute - ED-INAI scales with you
+            Whether you run a school, college, or coaching institute - edInai scales with you
           </p>
         </div>
 

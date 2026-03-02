@@ -33,7 +33,9 @@ const EdInaiSection = () => {
 
       <div className="relative max-w-6xl mx-auto text-center space-y-8 sm:space-y-16">
         <div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">What is edInai?</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">What is <span className="font-bold bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent">
+  edInai
+</span>?</h2>
           <p className="mt-4 text-base sm:text-lg text-white/60 max-w-3xl mx-auto leading-relaxed">
             edInai is an advanced AI-powered education platform developed to transform traditional classrooms into
             intelligent, interactive learning environments.

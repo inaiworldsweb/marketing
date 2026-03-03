@@ -25,7 +25,7 @@ const HeroSection = () => {
 
       {/* Main Content */}
       <main className="relative z-10 flex items-center justify-center min-h-[calc(100vh-80px)] px-4 sm:px-8 py-6 sm:py-12">
-        <div className="max-w-5xl mx-auto text-center space-y-6">
+        <div className="max-w-6xl mx-auto text-center space-y-6">
           <h1 className="text-5xl sm:text-6xl lg:text-8xl font-black leading-tight ">
             India's <span className="">First</span> Virtual
             <br />

@@ -202,8 +202,8 @@ const features = [
 
 const AdminDashboardSection = () => {
   return (
-    <section className="bg-gradient-to-br from-[#0F172A] via-black to-[#1E293B] text-white py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-gradient-to-br from-[#0F172A] via-black to-[#1E293B] text-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-3">
             Admin Dashboard Preview
@@ -215,11 +215,11 @@ const AdminDashboardSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Dashboard Preview */}
-          <div className="rounded-xl overflow-hidden">
+          <div className="overflow-hidden">
             <img
               src={adminImage}
               alt="Admin Dashboard"
-              className="w-full h-auto object-cover"
+              className="w-full h-full rounded-2xl  object-cover"
             />
           </div>
 

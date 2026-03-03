@@ -33,8 +33,18 @@ const TestimonialsSection = () => {
     },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // slide index represents which pair of testimonials to show
+  const [slideIndex, setSlideIndex] = useState(0);
   const [direction, setDirection] = useState(0); // 1 for right, -1 for left
+
+  const slideCount = Math.ceil(testimonials.length / 2);
+
+  // compute pair to display
+  const startIndex = (slideIndex * 2) % testimonials.length;
+  const displayed = [
+    testimonials[startIndex],
+    testimonials[(startIndex + 1) % testimonials.length],
+  ];
 
   // Auto-play logic
   useEffect(() => {
@@ -42,18 +52,16 @@ const TestimonialsSection = () => {
       handleNext();
     }, 5000);
     return () => clearInterval(timer);
-  }, [currentIndex]);
+  }, [slideIndex]);
 
   const handleNext = () => {
     setDirection(1);
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    setSlideIndex((prev) => (prev + 1) % slideCount);
   };
 
   const handlePrev = () => {
     setDirection(-1);
-    setCurrentIndex(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
-    );
+    setSlideIndex((prev) => (prev - 1 + slideCount) % slideCount);
   };
 
   const variants = {
@@ -74,8 +82,8 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="py-20 bg-black text-white overflow-hidden">
-      <div className="max-w-4xl mx-auto px-4">
+    <section className="py-16 sm:py-20 bg-black text-white overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -107,7 +115,7 @@ const TestimonialsSection = () => {
 
           <AnimatePresence initial={false} custom={direction} mode="wait">
             <motion.div
-              key={currentIndex}
+              key={slideIndex}
               custom={direction}
               variants={variants}
               initial="enter"
@@ -117,41 +125,44 @@ const TestimonialsSection = () => {
                 x: { type: "spring", stiffness: 300, damping: 30 },
                 opacity: { duration: 0.3 },
               }}
-              className="w-full bg-[#0A0A0A] border border-gray-800 rounded-3xl p-8 md:p-10 relative shadow-2xl"
+              className="w-full flex flex-col sm:flex-row gap-6"
             >
-              {/* Glow Effect */}
-              <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-blue-600/30 to-purple-600/30 rounded-3xl" />
-
-              <div className="relative">
-                <div className="flex flex-col sm:flex-row sm:items-center mb-6 gap-4">
-                  <div className="w-14 h-14 rounded-full bg-blue-600/20 border border-blue-500/50 flex items-center justify-center text-2xl font-bold text-blue-400">
-                    {testimonials[currentIndex].author.charAt(0)}
-                  </div>
-                  <div className="text-left flex-1">
-                    <p className="font-bold text-xl text-white">
-                      {testimonials[currentIndex].author}
+              {displayed.map((item) => (
+                <div
+                  key={item.id}
+                  className="w-full bg-[#0A0A0A] border border-gray-800 rounded-3xl p-8 md:p-10 relative shadow-2xl"
+                >
+                  <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-blue-600/30 to-purple-600/30 rounded-3xl" />
+                  <div className="relative">
+                    <div className="flex flex-col sm:flex-row sm:items-center mb-6 gap-4">
+                      <div className="w-14 h-14 rounded-full bg-blue-600/20 border border-blue-500/50 flex items-center justify-center text-2xl font-bold text-blue-400">
+                        {item.author.charAt(0)}
+                      </div>
+                      <div className="text-left flex-1">
+                        <p className="font-bold text-xl text-white">
+                          {item.author}
+                        </p>
+                        <p className="text-sm text-blue-400/80">{item.role}</p>
+                      </div>
+                      <div className="flex">
+                        {[...Array(5)].map((_, i) => (
+                          <svg
+                            key={i}
+                            className={`w-5 h-5 ${i < item.rating ? "text-yellow-500" : "text-gray-700"}`}
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
+                    </div>
+                    <p className="text-lg md:text-xl text-gray-300 italic leading-relaxed font-light">
+                      "{item.text}"
                     </p>
-                    <p className="text-sm text-blue-400/80">
-                      {testimonials[currentIndex].role}
-                    </p>
-                  </div>
-                  <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <svg
-                        key={i}
-                        className={`w-5 h-5 ${i < testimonials[currentIndex].rating ? "text-yellow-500" : "text-gray-700"}`}
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
                   </div>
                 </div>
-                <p className="text-lg md:text-xl text-gray-300 italic leading-relaxed font-light">
-                  "{testimonials[currentIndex].text}"
-                </p>
-              </div>
+              ))}
             </motion.div>
           </AnimatePresence>
 
@@ -175,15 +186,15 @@ const TestimonialsSection = () => {
         {/* Pagination Dots & Mobile Navigation */}
         <div className="flex flex-col items-center mt-10 gap-6">
           <div className="flex gap-2">
-            {testimonials.map((_, index) => (
+            {[...Array(slideCount)].map((_, idx) => (
               <button
-                key={index}
+                key={idx}
                 onClick={() => {
-                  setDirection(index > currentIndex ? 1 : -1);
-                  setCurrentIndex(index);
+                  setDirection(idx > slideIndex ? 1 : -1);
+                  setSlideIndex(idx);
                 }}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
-                  index === currentIndex ? "w-8 bg-blue-500" : "w-2 bg-gray-700"
+                  idx === slideIndex ? "w-8 bg-blue-500" : "w-2 bg-gray-700"
                 }`}
               />
             ))}

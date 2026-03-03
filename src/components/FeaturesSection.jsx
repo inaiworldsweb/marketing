@@ -365,7 +365,7 @@ const features = [
 
 const FeaturesSection = ({ onBookDemo }) => {
   return (
-    <section className="bg-black text-white relative overflow-hidden py-6 sm:py-8 px-4 sm:px-8">
+    <section className="bg-black text-white relative overflow-hidden py-16 sm:py-20 px-4 sm:px-8">
       <div
         className="absolute inset-0 pointer-events-none opacity-15"
         style={{

@@ -30,8 +30,8 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="bg-black text-white py-8 sm:py-12 px-4 sm:px-6">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+    <section className="bg-black text-white py-16 sm:py-20 px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
         {/* Left content */}
         <div className="flex justify-center items-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-2">

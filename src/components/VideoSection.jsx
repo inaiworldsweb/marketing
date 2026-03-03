@@ -9,8 +9,8 @@ const VideoSection = () => {
   };
 
   return (
-    <section id="watch-demo" className="w-full bg-black py-8 px-4">
-      <div className="max-w-4xl mx-auto">
+    <section id="watch-demo" className="w-full bg-black py-16 sm:py-20 px-4">
+      <div className="max-w-6xl mx-auto">
         <div className="flex flex-col items-center text-center">
           {/* Heading Section */}
           <h2 className="text-2xl md:text-4xl font-bold mb-8 leading-tight text-white">

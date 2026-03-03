@@ -136,8 +136,8 @@ const features = [
 
 const PersonalizedLearningSection = () => {
   return (
-    <section className="bg-gradient-to-br from-gray-900 to-black text-white py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-gradient-to-br from-gray-900 to-black text-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Personalized Learning Experience for Every Student
@@ -176,11 +176,11 @@ const PersonalizedLearningSection = () => {
             ))}
           </div>
 
-          <div className="relative rounded-xl overflow-hidden border border-gray-600/50">
+          <div className="relative overflow-hidden ">
             <img
               src={adminImage}
               alt="Personalized Learning Dashboard"
-              className="w-full h-auto object-cover"
+              className="w-full h-auto rounded-2xl object-cover"
             />
           </div>
         </div>

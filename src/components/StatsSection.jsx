@@ -2,7 +2,7 @@ import React from "react";
 
 const StatsSection = () => {
   return (
-    <section className="bg-black text-white relative overflow-hidden py-8 px-6">
+    <section className="bg-black text-white relative overflow-hidden py-16 sm:py-20 px-6">
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute inset-0 opacity-10"

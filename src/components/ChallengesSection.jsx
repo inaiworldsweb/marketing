@@ -12,7 +12,7 @@ const items = [
 
 const ChallengesSection = () => {
   return (
-    <section className="bg-black text-white relative overflow-hidden py-8 px-6">
+    <section className="bg-black text-white relative overflow-hidden py-16 sm:py-20 px-6">
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute inset-0 opacity-15"
@@ -54,7 +54,7 @@ const ChallengesSection = () => {
                 </svg>
               </div>
 
-              <h2 className="text-4xl md:text-5xl font-semibold text-center mb-8">
+              <h2 className="text-4xl md:text-[25px] font-semibold text-center mb-8">
                 Key Challenges Facing Educational Institutions Today
               </h2>
 

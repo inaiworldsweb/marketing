@@ -35,7 +35,7 @@ const highlights = [
 
 const WhyChooseSection = ({ onBookDemo }) => {
   return (
-    <section className="bg-black text-white relative overflow-hidden pt-10 sm:pt-16 pb-6 sm:pb-8 px-4 sm:px-6">
+    <section className="bg-black text-white relative overflow-hidden py-16 sm:py-20 px-4 sm:px-6">
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute inset-0 opacity-10"

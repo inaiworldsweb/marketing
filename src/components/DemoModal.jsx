@@ -1,46 +1,46 @@
-import { useEffect, useMemo, useState } from 'react';
-import { createPortal } from 'react-dom';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useMemo, useState } from "react";
+import { createPortal } from "react-dom";
+import { useNavigate } from "react-router-dom";
 
 const initialForm = {
-  fullName: '',
-  email: '',
-  phone: '',
-  institutionName: '',
-  institutionWebsite: '',
-  institutionType: '',
-  role: '',
-  studentCapacity: '',
+  fullName: "",
+  email: "",
+  phone: "",
+  institutionName: "",
+  institutionWebsite: "",
+  institutionType: "",
+  role: "",
+  studentCapacity: "",
 };
 
 const officialEmailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const blockedDomains = new Set([
-  'gmail.com',
-  'yahoo.com',
-  'hotmail.com',
-  'outlook.com',
-  'live.com',
-  'icloud.com',
-  'proton.me',
-  'protonmail.com',
+  "gmail.com",
+  "yahoo.com",
+  "hotmail.com",
+  "outlook.com",
+  "live.com",
+  "icloud.com",
+  "proton.me",
+  "protonmail.com",
 ]);
 
 const getEmailError = (email) => {
-  if (!email) return 'Email address is required.';
-  if (!officialEmailRegex.test(email)) return 'Enter a valid email address.';
-  const domain = email.split('@')[1]?.toLowerCase();
+  if (!email) return "Email address is required.";
+  if (!officialEmailRegex.test(email)) return "Enter a valid email address.";
+  const domain = email.split("@")[1]?.toLowerCase();
   // if (!domain || blockedDomains.has(domain)) {
   //   return 'Please use your official institution email.';
   // }
-  return '';
+  return "";
 };
 
 const formatPhone = (value) => {
-  const digits = value.replace(/[^\d+]/g, '');
-  if (!digits.startsWith('+')) {
-    return digits.replace(/[^\d]/g, '');
+  const digits = value.replace(/[^\d+]/g, "");
+  if (!digits.startsWith("+")) {
+    return digits.replace(/[^\d]/g, "");
   }
-  return `+${digits.replace(/[^\d]/g, '')}`;
+  return `+${digits.replace(/[^\d]/g, "")}`;
 };
 
 export default function DemoModal({ isOpen, onClose }) {
@@ -48,19 +48,19 @@ export default function DemoModal({ isOpen, onClose }) {
   const [formData, setFormData] = useState(initialForm);
   const [touched, setTouched] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [successMessage, setSuccessMessage] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     if (!isOpen) return;
     const handleKeyDown = (event) => {
-      if (event.key === 'Escape') onClose();
+      if (event.key === "Escape") onClose();
     };
-    document.addEventListener('keydown', handleKeyDown);
-    document.body.style.overflow = 'hidden';
+    document.addEventListener("keydown", handleKeyDown);
+    document.body.style.overflow = "hidden";
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = '';
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
     };
   }, [isOpen, onClose]);
 
@@ -69,16 +69,16 @@ export default function DemoModal({ isOpen, onClose }) {
       setFormData(initialForm);
       setTouched({});
       setIsSubmitting(false);
-      setSuccessMessage('');
-      setErrorMessage('');
+      setSuccessMessage("");
+      setErrorMessage("");
     }
   }, [isOpen]);
 
   const errors = useMemo(() => {
     return {
-      fullName: !formData.fullName ? 'Full name is required.' : '',
+      fullName: !formData.fullName ? "Full name is required." : "",
       email: getEmailError(formData.email),
-      phone: !formData.phone ? 'Phone number is required.' : '',
+      phone: !formData.phone ? "Phone number is required." : "",
     };
   }, [formData]);
 
@@ -92,7 +92,7 @@ export default function DemoModal({ isOpen, onClose }) {
     const { name, value } = event.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: name === 'phone' ? formatPhone(value) : value,
+      [name]: name === "phone" ? formatPhone(value) : value,
     }));
   };
 
@@ -103,7 +103,7 @@ export default function DemoModal({ isOpen, onClose }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setErrorMessage('');
+    setErrorMessage("");
     setTouched({
       fullName: true,
       email: true,
@@ -117,8 +117,11 @@ export default function DemoModal({ isOpen, onClose }) {
       const numberOfStudents = (() => {
         const value = formData.studentCapacity;
         if (!value) return 0;
-        if (value.endsWith('+')) return Number.parseInt(value, 10) || 0;
-        const parts = value.split('-').map((part) => Number.parseInt(part, 10)).filter(Boolean);
+        if (value.endsWith("+")) return Number.parseInt(value, 10) || 0;
+        const parts = value
+          .split("-")
+          .map((part) => Number.parseInt(part, 10))
+          .filter(Boolean);
         if (parts.length === 2) return parts[1];
         return Number.parseInt(value, 10) || 0;
       })();
@@ -136,21 +139,23 @@ export default function DemoModal({ isOpen, onClose }) {
 
       const baseUrl = import.meta.env.VITE_API_URL;
       const response = await fetch(`${baseUrl}/demo-details`, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(payload),
       });
 
       if (!response.ok) {
-        throw new Error('Submission failed. Please try again.');
+        throw new Error("Submission failed. Please try again.");
       }
 
       onClose();
-      navigate('/thank-you');
+      navigate("/thank-you");
     } catch (error) {
-      setErrorMessage(error?.message || 'Something went wrong. Please try again.');
+      setErrorMessage(
+        error?.message || "Something went wrong. Please try again.",
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -167,8 +172,12 @@ export default function DemoModal({ isOpen, onClose }) {
       <div className="relative w-full max-w-4xl overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#0b1221] via-[#07090f] to-[#0b1221] text-white shadow-[0_40px_120px_rgba(0,0,0,0.7)] animate-[scaleIn_220ms_ease-out]">
         <div className="flex items-center justify-between border-b border-white/10 px-6 py-4">
           <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-white/60">Book a demo</p>
-            <h2 className="text-2xl font-semibold">Let us tailor ED-INAI for your institution</h2>
+            <p className="text-sm uppercase tracking-[0.3em] text-white/60">
+              Book a demo
+            </p>
+            <h2 className="text-4xl md:text-5xl font-semibold">
+              Let us tailor edInai for your institution
+            </h2>
           </div>
           <button
             type="button"
@@ -183,7 +192,9 @@ export default function DemoModal({ isOpen, onClose }) {
         <form onSubmit={handleSubmit} className="space-y-6 px-6 py-6">
           <div className="grid gap-5 md:grid-cols-2">
             <div className="space-y-2">
-              <label className="text-sm text-white/70" htmlFor="fullName">Full Name *</label>
+              <label className="text-sm text-white/70" htmlFor="fullName">
+                Full Name *
+              </label>
               <input
                 id="fullName"
                 name="fullName"
@@ -199,7 +210,9 @@ export default function DemoModal({ isOpen, onClose }) {
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm text-white/70" htmlFor="email">Email Address *</label>
+              <label className="text-sm text-white/70" htmlFor="email">
+                Email Address *
+              </label>
               <input
                 id="email"
                 name="email"
@@ -216,7 +229,9 @@ export default function DemoModal({ isOpen, onClose }) {
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm text-white/70" htmlFor="phone">Phone Number *</label>
+              <label className="text-sm text-white/70" htmlFor="phone">
+                Phone Number *
+              </label>
               <input
                 id="phone"
                 name="phone"
@@ -233,7 +248,12 @@ export default function DemoModal({ isOpen, onClose }) {
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm text-white/70" htmlFor="institutionName">Institution Name</label>
+              <label
+                className="text-sm text-white/70"
+                htmlFor="institutionName"
+              >
+                Institution Name
+              </label>
               <input
                 id="institutionName"
                 name="institutionName"
@@ -245,7 +265,12 @@ export default function DemoModal({ isOpen, onClose }) {
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm text-white/70" htmlFor="institutionWebsite">Institution Website</label>
+              <label
+                className="text-sm text-white/70"
+                htmlFor="institutionWebsite"
+              >
+                Institution Website
+              </label>
               <input
                 id="institutionWebsite"
                 name="institutionWebsite"
@@ -257,7 +282,12 @@ export default function DemoModal({ isOpen, onClose }) {
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm text-white/70" htmlFor="institutionType">Institution Type</label>
+              <label
+                className="text-sm text-white/70"
+                htmlFor="institutionType"
+              >
+                Institution Type
+              </label>
               <select
                 id="institutionType"
                 name="institutionType"
@@ -276,7 +306,9 @@ export default function DemoModal({ isOpen, onClose }) {
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm text-white/70" htmlFor="role">Your Role</label>
+              <label className="text-sm text-white/70" htmlFor="role">
+                Your Role
+              </label>
               <select
                 id="role"
                 name="role"
@@ -295,7 +327,12 @@ export default function DemoModal({ isOpen, onClose }) {
             </div>
 
             <div className="space-y-2 md:col-span-2">
-              <label className="text-sm text-white/70" htmlFor="studentCapacity">Student Capacity</label>
+              <label
+                className="text-sm text-white/70"
+                htmlFor="studentCapacity"
+              >
+                Student Capacity
+              </label>
               <select
                 id="studentCapacity"
                 name="studentCapacity"
@@ -314,14 +351,15 @@ export default function DemoModal({ isOpen, onClose }) {
 
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-xs text-white/50">
-              By submitting, you agree to receive a response from the ED-INAI team.
+              By submitting, you agree to receive a response from the ED-INAI
+              team.
             </p>
             <button
               type="submit"
               disabled={isSubmitting}
               className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 px-8 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.5)] transition disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {isSubmitting ? 'Submitting...' : 'Request a Demo'}
+              {isSubmitting ? "Submitting..." : "Request a Demo"}
             </button>
           </div>
 
@@ -349,6 +387,6 @@ export default function DemoModal({ isOpen, onClose }) {
         }
       `}</style>
     </div>,
-    document.body
+    document.body,
   );
 }

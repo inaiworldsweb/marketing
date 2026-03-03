@@ -1,42 +1,48 @@
-import React from 'react';
+import React from "react";
 
 const highlights = [
   {
-    title: 'AI teachers never get tired',
-    base: 'from-violet-500/20 via-black/70 to-black/90 border-violet-400/30 shadow-[0_0_40px_rgba(124,58,237,0.25)]',
-    hover: 'hover:border-violet-400/60 hover:shadow-[0_0_70px_rgba(124,58,237,0.50),0_8px_30px_rgba(124,58,237,0.25)]',
+    title: "AI teachers never get tired",
+    base: "from-violet-500/20 via-black/70 to-black/90 border-violet-400/30 shadow-[0_0_40px_rgba(124,58,237,0.25)]",
+    hover:
+      "hover:border-violet-400/60 hover:shadow-[0_0_70px_rgba(124,58,237,0.50),0_8px_30px_rgba(124,58,237,0.25)]",
   },
   {
-    title: '24x7 learning access for students',
-    base: 'from-orange-500/20 via-black/70 to-black/90 border-orange-400/30 shadow-[0_0_40px_rgba(251,146,60,0.2)]',
-    hover: 'hover:border-orange-400/60 hover:shadow-[0_0_70px_rgba(251,146,60,0.45),0_8px_30px_rgba(251,146,60,0.22)]',
+    title: "24x7 learning access for students",
+    base: "from-orange-500/20 via-black/70 to-black/90 border-orange-400/30 shadow-[0_0_40px_rgba(251,146,60,0.2)]",
+    hover:
+      "hover:border-orange-400/60 hover:shadow-[0_0_70px_rgba(251,146,60,0.45),0_8px_30px_rgba(251,146,60,0.22)]",
   },
   {
-    title: 'Multilingual teaching support',
-    base: 'from-emerald-500/20 via-black/70 to-black/90 border-emerald-400/30 shadow-[0_0_40px_rgba(16,185,129,0.2)]',
-    hover: 'hover:border-emerald-400/60 hover:shadow-[0_0_70px_rgba(16,185,129,0.45),0_8px_30px_rgba(16,185,129,0.22)]',
+    title: "Multilingual teaching support",
+    base: "from-emerald-500/20 via-black/70 to-black/90 border-emerald-400/30 shadow-[0_0_40px_rgba(16,185,129,0.2)]",
+    hover:
+      "hover:border-emerald-400/60 hover:shadow-[0_0_70px_rgba(16,185,129,0.45),0_8px_30px_rgba(16,185,129,0.22)]",
   },
   {
-    title: 'Same teaching quality across all classes',
-    base: 'from-rose-500/20 via-black/70 to-black/90 border-rose-400/30 shadow-[0_0_40px_rgba(244,63,94,0.2)]',
-    hover: 'hover:border-rose-400/60 hover:shadow-[0_0_70px_rgba(244,63,94,0.45),0_8px_30px_rgba(244,63,94,0.22)]',
+    title: "Same teaching quality across all classes",
+    base: "from-rose-500/20 via-black/70 to-black/90 border-rose-400/30 shadow-[0_0_40px_rgba(244,63,94,0.2)]",
+    hover:
+      "hover:border-rose-400/60 hover:shadow-[0_0_70px_rgba(244,63,94,0.45),0_8px_30px_rgba(244,63,94,0.22)]",
   },
   {
-    title: 'Secure, cloud-based infrastructure',
-    base: 'from-amber-500/20 via-black/70 to-black/90 border-amber-400/30 shadow-[0_0_40px_rgba(245,158,11,0.2)]',
-    hover: 'hover:border-amber-400/60 hover:shadow-[0_0_70px_rgba(245,158,11,0.45),0_8px_30px_rgba(245,158,11,0.22)]',
+    title: "Secure, cloud-based infrastructure",
+    base: "from-amber-500/20 via-black/70 to-black/90 border-amber-400/30 shadow-[0_0_40px_rgba(245,158,11,0.2)]",
+    hover:
+      "hover:border-amber-400/60 hover:shadow-[0_0_70px_rgba(245,158,11,0.45),0_8px_30px_rgba(245,158,11,0.22)]",
   },
 ];
 
 const WhyChooseSection = ({ onBookDemo }) => {
   return (
-    <section className="bg-black text-white relative overflow-hidden pt-10 sm:pt-16 pb-6 sm:pb-8 px-4 sm:px-6">
+    <section className="bg-black text-white relative overflow-hidden py-16 sm:py-20 px-4 sm:px-6">
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute inset-0 opacity-10"
           style={{
-            backgroundImage: 'radial-gradient(circle, #444 1px, transparent 1px)',
-            backgroundSize: '16px 16px',
+            backgroundImage:
+              "radial-gradient(circle, #444 1px, transparent 1px)",
+            backgroundSize: "16px 16px",
           }}
         />
         <div className="absolute -left-32 top-0 h-full w-[420px] bg-gradient-to-r from-[#101a3f] to-transparent opacity-35" />
@@ -47,13 +53,16 @@ const WhyChooseSection = ({ onBookDemo }) => {
         <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-black/70 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] px-4 sm:px-10 py-8 sm:py-12">
           <div className="text-center">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
-              <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-center">
+              <h2 className="text-4xl md:text-5xl font-bold text-center">
                 Why Institutions Choose
               </h2>
-              <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-blue-500">edInai</h2>
+              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent">
+                edInai
+              </h2>
             </div>
             <p className="mt-2 text-xs sm:text-sm text-white/70">
-              edInai is designed to deliver measurable academic and operational impact.
+              edInai is designed to deliver measurable academic and operational
+              impact.
             </p>
           </div>
 

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const Preloader = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -18,7 +18,7 @@ const Preloader = () => {
   return (
     <div
       className={`fixed inset-0 z-[9999] flex items-center justify-center bg-black transition-opacity duration-500 ${
-        fadeOut ? 'opacity-0 pointer-events-none' : 'opacity-100'
+        fadeOut ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
       <div className="text-center space-y-6">
@@ -26,7 +26,7 @@ const Preloader = () => {
         <div className="relative">
           {/* Outer glow ring */}
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 blur-xl opacity-50 animate-pulse" />
-          
+
           {/* Inner content */}
           <div className="relative bg-black rounded-full p-8 border border-white/20">
             <span className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
@@ -43,9 +43,7 @@ const Preloader = () => {
         </div>
 
         {/* Loading text */}
-        <p className="text-white/60 text-sm tracking-widest uppercase">
-          Loading Experience
-        </p>
+        <p className="text-white/60 text-sm st uppercase">Loading Experience</p>
       </div>
     </div>
   );

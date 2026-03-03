@@ -1,24 +1,24 @@
-import React from 'react';
+import React from "react";
 
 const items = [
-  'Teacher shortages & inconsistent teaching quality',
-  'High operational and faculty costs',
-  'Inconsistent teaching quality across batches',
-  'Limited time for revision and doubt solving',
-  'Limited student engagement in traditional classrooms',
-  'No personalized learning at scale',
-  'Manual scheduling, tracking, and reporting',
+  "Teacher shortages & inconsistent teaching quality",
+  "High operational and faculty costs",
+  "Inconsistent teaching quality across batches",
+  "Limited time for revision and doubt solving",
+  "Limited student engagement in traditional classrooms",
+  "No personalized learning at scale",
+  "Manual scheduling, tracking, and reporting",
 ];
 
 const ChallengesSection = () => {
   return (
-    <section className="bg-black text-white relative overflow-hidden py-8 px-6">
+    <section className="bg-black text-white relative overflow-hidden py-16 sm:py-20 px-6">
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute inset-0 opacity-15"
           style={{
             backgroundImage: `radial-gradient(circle, #444 1px, transparent 1px)`,
-            backgroundSize: '15px 15px',
+            backgroundSize: "15px 15px",
           }}
         />
         <div className="absolute -left-40 top-0 h-full w-[520px] bg-gradient-to-r from-[#0b1b3a] to-transparent opacity-35" />
@@ -26,7 +26,7 @@ const ChallengesSection = () => {
       </div>
 
       <div className="relative max-w-6xl mx-auto">
-        <h1 className="text-center lg:text-3xl md:text-xl font-bold text-white/90 leading-snug">
+        <h1 className="text-center text-[25px] md:text-[40px] md:text-xl font-bold text-white/90 leading-snug">
           Overcoming Obstacles in Student
           <br />
           Learning and Engagement
@@ -37,12 +37,24 @@ const ChallengesSection = () => {
             <div className="relative pl-12">
               <div className="absolute left-1 top-8 bottom-0 w-px bg-blue-500/55" />
               <div className="absolute left-[-6px] top-2 h-6 w-6 rounded-full bg-blue-500/40 ring-1 ring-blue-300/50 flex items-center justify-center">
-                <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 10l4 4 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-300" />
+                <svg
+                  viewBox="0 0 24 24"
+                  className="h-3.5 w-3.5"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 10l4 4 4-4"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-blue-300"
+                  />
                 </svg>
               </div>
 
-              <h2 className="text-xl sm:text-3xl font-semibold text-center mb-8">
+              <h2 className="text-4xl md:text-[25px] font-semibold text-center mb-8">
                 Key Challenges Facing Educational Institutions Today
               </h2>
 
@@ -50,10 +62,12 @@ const ChallengesSection = () => {
                 {items.map((text) => (
                   <div
                     key={text}
-                    className="challenge-item px-6 py-4 text-[13px] md:text-sm font-medium tracking-tight text-white/90 min-h-[56px] cursor-pointer transition-all duration-300"
+                    className="challenge-item px-6 py-4 text-[13px] md:text-[15px] font-medium  text-white/90 min-h-[56px] cursor-pointer transition-all duration-300"
                   >
                     <div className="flex items-center gap-4">
-                      <span className="text-white/85 w-5 text-center text-[12px] md:text-[13px]">✓</span>
+                      <span className="text-white/85 w-5 text-center text-[12px] md:text-[15px]">
+                        ✓
+                      </span>
                       <span className="leading-snug">{text}</span>
                     </div>
                   </div>

@@ -1,13 +1,16 @@
-import React from 'react';
+import React from "react";
 
 const StatsSection = () => {
   return (
-    <section className="bg-black text-white relative overflow-hidden py-8 px-6">
+    <section className="bg-black text-white relative overflow-hidden py-16 sm:py-20 px-6">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 opacity-10" style={{
-          backgroundImage: `radial-gradient(circle, #444 1px, transparent 1px)`,
-          backgroundSize: '15px 15px',
-        }} />
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: `radial-gradient(circle, #444 1px, transparent 1px)`,
+            backgroundSize: "15px 15px",
+          }}
+        />
         <div className="absolute -left-32 top-0 h-full w-96 bg-gradient-to-r from-[#0b1b3a] to-transparent opacity-35" />
       </div>
 
@@ -26,14 +29,18 @@ const StatsSection = () => {
                 className="absolute inset-0 opacity-35 transition-opacity duration-[400ms] group-hover:opacity-50"
                 style={{
                   backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.35) 1px, transparent 1px)`,
-                  backgroundSize: '18px 18px',
+                  backgroundSize: "18px 18px",
                 }}
               />
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(124,58,237,0.18),transparent_58%)] transition-all duration-[400ms] group-hover:bg-[radial-gradient(ellipse_at_center,rgba(124,58,237,0.32),transparent_65%)]" />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(124,58,237,0.20),transparent_55%)] transition-all duration-[400ms] group-hover:bg-[linear-gradient(180deg,rgba(124,58,237,0.35),transparent_60%)]" />
               <div className="absolute inset-0 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06),inset_0_0_28px_rgba(124,58,237,0.18)] transition-all duration-[400ms] group-hover:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12),inset_0_0_45px_rgba(124,58,237,0.32)]" />
-              <div className="relative text-4xl md:text-5xl font-medium tracking-wide transition-transform duration-[400ms] group-hover:scale-[1.02]">500+</div>
-              <div className="relative mt-2 text-sm md:text-base text-white/80 transition-colors duration-[400ms] group-hover:text-white/95">Institutions Transformed</div>
+              <div className="relative text-4xl md:text-5xl font-medium  transition-transform duration-[400ms] group-hover:scale-[1.02]">
+                500+
+              </div>
+              <div className="relative mt-2 text-sm md:text-base text-white/80 transition-colors duration-[400ms] group-hover:text-white/95">
+                Institutions Transformed
+              </div>
             </div>
 
             {/* Amber Card - Students Learning Daily */}
@@ -42,14 +49,18 @@ const StatsSection = () => {
                 className="absolute inset-0 opacity-35 transition-opacity duration-[400ms] group-hover:opacity-50"
                 style={{
                   backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.32) 1px, transparent 1px)`,
-                  backgroundSize: '18px 18px',
+                  backgroundSize: "18px 18px",
                 }}
               />
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(245,158,11,0.14),transparent_58%)] transition-all duration-[400ms] group-hover:bg-[radial-gradient(ellipse_at_center,rgba(245,158,11,0.28),transparent_65%)]" />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(245,158,11,0.18),transparent_55%)] transition-all duration-[400ms] group-hover:bg-[linear-gradient(180deg,rgba(245,158,11,0.32),transparent_60%)]" />
               <div className="absolute inset-0 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06),inset_0_0_28px_rgba(245,158,11,0.14)] transition-all duration-[400ms] group-hover:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12),inset_0_0_45px_rgba(245,158,11,0.28)]" />
-              <div className="relative text-4xl md:text-5xl font-medium tracking-wide transition-transform duration-[400ms] group-hover:scale-[1.02]">50,000+</div>
-              <div className="relative mt-2 text-sm md:text-base text-white/80 transition-colors duration-[400ms] group-hover:text-white/95">Students Learning Daily</div>
+              <div className="relative text-4xl md:text-5xl font-medium  transition-transform duration-[400ms] group-hover:scale-[1.02]">
+                50,000+
+              </div>
+              <div className="relative mt-2 text-sm md:text-base text-white/80 transition-colors duration-[400ms] group-hover:text-white/95">
+                Students Learning Daily
+              </div>
             </div>
 
             {/* Emerald Card - AI Teaching Support */}
@@ -58,14 +69,18 @@ const StatsSection = () => {
                 className="absolute inset-0 opacity-35 transition-opacity duration-[400ms] group-hover:opacity-50"
                 style={{
                   backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.30) 1px, transparent 1px)`,
-                  backgroundSize: '18px 18px',
+                  backgroundSize: "18px 18px",
                 }}
               />
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(34,197,94,0.14),transparent_58%)] transition-all duration-[400ms] group-hover:bg-[radial-gradient(ellipse_at_center,rgba(34,197,94,0.28),transparent_65%)]" />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(34,197,94,0.18),transparent_55%)] transition-all duration-[400ms] group-hover:bg-[linear-gradient(180deg,rgba(34,197,94,0.32),transparent_60%)]" />
               <div className="absolute inset-0 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06),inset_0_0_28px_rgba(34,197,94,0.14)] transition-all duration-[400ms] group-hover:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12),inset_0_0_45px_rgba(34,197,94,0.28)]" />
-              <div className="relative text-4xl md:text-5xl font-medium tracking-wide transition-transform duration-[400ms] group-hover:scale-[1.02]">24/7</div>
-              <div className="relative mt-2 text-sm md:text-base text-white/80 transition-colors duration-[400ms] group-hover:text-white/95">AI Teaching Support</div>
+              <div className="relative text-4xl md:text-5xl font-medium  transition-transform duration-[400ms] group-hover:scale-[1.02]">
+                24/7
+              </div>
+              <div className="relative mt-2 text-sm md:text-base text-white/80 transition-colors duration-[400ms] group-hover:text-white/95">
+                AI Teaching Support
+              </div>
             </div>
           </div>
         </div>

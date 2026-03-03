@@ -33,7 +33,7 @@ export default function FAQSection() {
 
   return (
     <section className="bg-black text-white py-8 sm:py-12 px-4 sm:px-6">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
         {/* Left content */}
         <div className="flex justify-center items-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-2">

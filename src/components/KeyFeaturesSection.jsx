@@ -38,7 +38,7 @@ const KeyFeaturesSection = () => {
                 <div className="text-center mb-0 relative z-20">
                     <div className="inline-block relative">
                         {/* Faint header container if needed, sticking to text for now as per image */}
-                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                             Key Features Overview
                         </h2>
                         <p className="text-lg text-gray-400 font-medium">

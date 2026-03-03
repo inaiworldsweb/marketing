@@ -13,8 +13,7 @@ const faqs = [
   },
   {
     question: " Is edInai available in multiple languages?",
-    answer:
-      "Yes. The platform supports multilingual teaching.",
+    answer: "Yes. The platform supports multilingual teaching.",
   },
   {
     question: " How secure is the platform?",
@@ -23,8 +22,7 @@ const faqs = [
   },
   {
     question: " How long does implementation take?",
-    answer:
-      "Most institutions can go live within a few days.",
+    answer: "Most institutions can go live within a few days.",
   },
 ];
 
@@ -36,10 +34,11 @@ export default function FAQSection() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
         {/* Left content */}
         <div className="flex justify-center items-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-2">
-            Frequently Asked <br /><span className="flex justify-center items-center bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent">
-  Questions
-</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-2">
+            Frequently Asked <br />
+            <span className="flex justify-center items-center bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent">
+              Questions
+            </span>
           </h2>
           {/* <h2 className="text-3xl md:text-4xl font-bold mb-2">
             Frequently Asked
@@ -66,17 +65,22 @@ export default function FAQSection() {
                 onClick={() => setOpenIndex(isOpen ? null : index)}
               >
                 <div className="w-full flex items-center justify-between px-6 py-5 text-left">
-                  <span className={`font-medium text-sm md:text-base transition-colors duration-300 ${isOpen ? 'text-white' : 'text-gray-200'}`}>
+                  <span
+                    className={`font-medium text-sm md:text-base transition-colors duration-300 ${isOpen ? "text-white" : "text-gray-200"}`}
+                  >
                     {faq.question}
                   </span>
-                  <span className={`text-xl transition-all duration-300 ${isOpen ? 'text-blue-400 rotate-45' : 'text-gray-400 rotate-0'}`}>
+                  <span
+                    className={`text-xl transition-all duration-300 ${isOpen ? "text-blue-400 rotate-45" : "text-gray-400 rotate-0"}`}
+                  >
                     +
                   </span>
                 </div>
 
                 <div
-                  className={`overflow-hidden transition-all duration-300 ease-out ${isOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
-                    }`}
+                  className={`overflow-hidden transition-all duration-300 ease-out ${
+                    isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+                  }`}
                 >
                   <div className="px-6 pb-5 text-gray-300 text-sm leading-relaxed">
                     {faq.answer}

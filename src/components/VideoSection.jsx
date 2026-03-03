@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const VideoSection = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
@@ -13,8 +13,9 @@ const VideoSection = () => {
       <div className="max-w-4xl mx-auto">
         <div className="flex flex-col items-center text-center">
           {/* Heading Section */}
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 leading-tight text-white">
-            This short demo walks you through how INAI, VNAI, and AIRA actually work inside a live classroom environment.
+          <h2 className="text-2xl md:text-4xl font-bold mb-8 leading-tight text-white">
+            This short demo walks you through how INAI, VNAI, and AIRA actually
+            work inside a live classroom environment.
           </h2>
 
           {/* Video Section */}
@@ -55,7 +56,6 @@ const VideoSection = () => {
               )}
             </div>
           </div>
-
         </div>
       </div>
     </section>

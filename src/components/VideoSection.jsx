@@ -13,13 +13,13 @@ const VideoSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col items-center text-center">
           {/* Heading Section */}
-          <h2 className="text-2xl md:text-4xl font-bold mb-8 leading-tight text-white">
+          <h2 className="text-[25px] md:text-[40px] font-bold mb-8 leading-tight text-white">
             This short demo walks you through how INAI, VNAI, and AIRA actually
             work inside a live classroom environment.
           </h2>
 
           {/* Video Section */}
-          <div className="w-full max-w-2xl relative my-8">
+          <div className="w-full max-w-5xl relative my-8">
             <div className="relative aspect-video bg-gray-900 rounded-2xl overflow-hidden">
               {!isVideoPlaying ? (
                 <div
@@ -31,10 +31,10 @@ const VideoSection = () => {
                     alt="ED-INAI Demo"
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors duration-300">
-                    <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform duration-300">
+                  <div className="absolute inset-0 bg-black/40 flex items-center  justify-center group-hover:bg-black/30 transition-colors duration-300">
+                    <div className="md:w-20 w-10 md:h-20 h-10 md:mt-24 mt-11 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform duration-300">
                       <svg
-                        className="w-10 h-10 text-white ml-1"
+                        className="md:w-10 w-5 md:h-10 h-5 text-white"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"

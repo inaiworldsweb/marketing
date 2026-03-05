@@ -34,7 +34,7 @@ export default function FAQSection() {
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
         {/* Left content */}
         <div className="flex justify-center items-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-2">
+          <h2 className="text-[25px] md:text-[40px] font-bold mb-2">
             Frequently Asked <br />
             <span className="flex justify-center items-center bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent">
               Questions

@@ -86,10 +86,10 @@ const TestimonialsSection = () => {
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-[25px] md:text-[40px] font-bold mb-4">
             What our users say about us
           </h2>
-          <p className="text-sm text-white/60 max-w-lg mx-auto">
+          <p className="text-[15px] md:text-[21px] text-white/60 max-w-lg mx-auto">
             Hear from students and educators who have experienced the difference
           </p>
         </div>
@@ -99,7 +99,7 @@ const TestimonialsSection = () => {
           {/* Navigation Buttons (Desktop) */}
           <button
             onClick={handlePrev}
-            className="hidden md:flex absolute -left-16 z-20 w-12 h-12 rounded-full border border-gray-700 items-center justify-center hover:bg-white/10 transition-all"
+            className="hidden md:flex absolute -left-16 z-20 w-10 h-12 rounded-full border border-gray-700 items-center justify-center hover:bg-white/10 transition-all"
           >
             <svg
               width="24"
@@ -157,7 +157,7 @@ const TestimonialsSection = () => {
                         ))}
                       </div>
                     </div>
-                    <p className="text-lg md:text-xl text-gray-300 italic leading-relaxed font-light">
+                    <p className="text-[13px] md:text-[17px] text-gray-300 italic leading-relaxed font-light">
                       "{item.text}"
                     </p>
                   </div>

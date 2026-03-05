@@ -52,14 +52,14 @@ const ImplementationSection = () => {
           <span className="inline-block px-4 py-1.5 text-xs font-medium text-blue-300 bg-blue-900/30 rounded-full border border-blue-500/20">
             Implementation Process
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white">
+          <h2 className="text-[25px] md:text-[40px] font-bold text-white">
             How to Get Started with{" "}
             <span className="bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent">
               edInai
             </span>
             ?
           </h2>
-          <p className="text-base sm:text-lg text-white/80 max-w-3xl mx-auto">
+          <p className="text-[15px] md:text-[21px]  text-white/80 max-w-3xl mx-auto">
             Fast, Simple, and Seamless Integration for Educational Institutions
           </p>
         </div>

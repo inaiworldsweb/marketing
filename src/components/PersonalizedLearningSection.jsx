@@ -139,10 +139,10 @@ const PersonalizedLearningSection = () => {
     <section className="bg-gradient-to-br from-gray-900 to-black text-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-[25px] md:text-[40px] font-bold mb-4">
             Personalized Learning Experience for Every Student
           </h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+          <p className="text-gray-300 text-[15px] md:text-[21px] max-w-3xl mx-auto">
             Still you have any questions? Contact our Team via{" "}
             <a
               href="mailto:info@inaiworlds.com"

@@ -12,17 +12,17 @@ const HeroSection = ({ onBookDemo }) => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 min-h-screen">
-        <h1 className="text-white text-3xl md:text-5xl font-bold max-w-3xl">
+        <h1 className="text-white text-[25px] md:text-[40px] font-bold max-w-4xl">
           Ready to Transform Your Classrooms with AI?
         </h1>
 
-        <p className="mt-4 text-gray-400 text-sm md:text-base max-w-xl">
+        <p className="mt-4 text-gray-400 text-[15px] md:text-[21px] max-w-xl">
           Experience the future of teaching with edInai.
         </p>
 
         <button
           onClick={onBookDemo}
-          className="mt-8 min-h-[44px] px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 transition text-white font-medium shadow-[0_10px_30px_rgba(59,130,246,0.5)]"
+          className="mt-8 cursor-pointer px-6 py-3 rounded-[7px] bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 transition text-white font-medium shadow-[0_10px_30px_rgba(59,130,246,0.5)]"
         >
           Book Your Demo Now
         </button>

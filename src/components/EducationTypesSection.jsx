@@ -54,10 +54,10 @@ const EducationTypesSection = ({ onBookDemo }) => {
 
       <div className="relative max-w-6xl mx-auto">
         <div className="text-center">
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-[25px] md:text-[40px] font-bold">
             Designed for Every Type of Educational Institution
           </h2>
-          <p className="mt-2 text-xs sm:text-sm text-white/70">
+          <p className="mt-2 text-[15px] md:text-[21px] text-white/70">
             Whether you run a school, college, or coaching institute - edInai
             scales with you
           </p>
@@ -69,8 +69,8 @@ const EducationTypesSection = ({ onBookDemo }) => {
               key={card.title}
               className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/8 via-black/70 to-black/90 shadow-[0_25px_70px_rgba(0,0,0,0.65)] p-6 flex flex-col"
             >
-              <h3 className="text-2xl font-bold text-blue-400">{card.title}</h3>
-              <p className="mt-2 text-[11px] text-white/60 leading-relaxed">
+              <h3 className="text-[22px] font-bold text-blue-400">{card.title}</h3>
+              <p className="mt-2 text-[11px] md:text-[14px] text-white/60 leading-relaxed">
                 {card.subtitle}
               </p>
               <ul className="mt-4 space-y-3 text-[12px] text-white/80">
@@ -83,7 +83,7 @@ const EducationTypesSection = ({ onBookDemo }) => {
               </ul>
               <button
                 onClick={onBookDemo}
-                className="mt-6 min-h-[44px] self-start rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 px-5 py-2.5 text-xs font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.5)] transition"
+                className="mt-6 cursor-pointer self-start rounded-[7px] bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 px-5 py-2.5 text-xs font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.5)] transition"
               >
                 Book a Demo
               </button>

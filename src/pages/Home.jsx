@@ -1,26 +1,41 @@
-import React, { useState, useEffect, lazy, Suspense } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from "react";
+import Navbar from "../components/Navbar";
 
 // Lazy load components for better performance
-const HeroSection = lazy(() => import('../components/HeroSection'));
-const StatsSection = lazy(() => import('../components/StatsSection'));
-const VideoSection = lazy(() => import('../components/VideoSection'));
-const TestimonialsSection = lazy(() => import('../components/TestimonialsSection'));
-const ChallengesSection = lazy(() => import('../components/ChallengesSection'));
-const WhyChooseSection = lazy(() => import('../components/WhyChooseSection'));
-const EducationTypesSection = lazy(() => import('../components/EducationTypesSection'));
-const HowWorksSection = lazy(() => import('../components/HowWorksSection'));
-const AdminDashboardSection = lazy(() => import('../components/AdminDashboardSection'));
-const PersonalizedLearningSection = lazy(() => import('../components/PersonalizedLearningSection'));
-const FeaturesSection = lazy(() => import('../components/FeaturesSection'));
-const EdInaiSection = lazy(() => import('../components/EdInaiSection'));
-const AiTeachersSection = lazy(() => import('../components/AiTeachersSection'));
-const ImplementationSection = lazy(() => import('../components/ImplementationSection'));
-const KeyFeaturesSection = lazy(() => import('../components/KeyFeaturesSection'));
-const WhyChooseUsSection = lazy(() => import('../components/WhyChooseUsSection'));
-const FAQSection = lazy(() => import('../components/FAQ'));
-const Foot = lazy(() => import('../components/Foot'));
-import LoadingScreen from '../components/LoadingScreen';
-import DemoModal from '../components/DemoModal';
+const HeroSection = lazy(() => import("../components/HeroSection"));
+const StatsSection = lazy(() => import("../components/StatsSection"));
+const VideoSection = lazy(() => import("../components/VideoSection"));
+const TestimonialsSection = lazy(
+  () => import("../components/TestimonialsSection"),
+);
+const ChallengesSection = lazy(() => import("../components/ChallengesSection"));
+const WhyChooseSection = lazy(() => import("../components/WhyChooseSection"));
+const EducationTypesSection = lazy(
+  () => import("../components/EducationTypesSection"),
+);
+const HowWorksSection = lazy(() => import("../components/HowWorksSection"));
+const AdminDashboardSection = lazy(
+  () => import("../components/AdminDashboardSection"),
+);
+const PersonalizedLearningSection = lazy(
+  () => import("../components/PersonalizedLearningSection"),
+);
+const FeaturesSection = lazy(() => import("../components/FeaturesSection"));
+const EdInaiSection = lazy(() => import("../components/EdInaiSection"));
+const AiTeachersSection = lazy(() => import("../components/AiTeachersSection"));
+const ImplementationSection = lazy(
+  () => import("../components/ImplementationSection"),
+);
+const KeyFeaturesSection = lazy(
+  () => import("../components/KeyFeaturesSection"),
+);
+const WhyChooseUsSection = lazy(
+  () => import("../components/WhyChooseUsSection"),
+);
+const FAQSection = lazy(() => import("../components/FAQ"));
+const Foot = lazy(() => import("../components/Foot"));
+import LoadingScreen from "../components/LoadingScreen";
+import DemoModal from "../components/DemoModal";
 
 // Fallback component for lazy loading
 const LoadingFallback = () => (
@@ -41,6 +56,13 @@ const Home = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    const handleOpenDemoModal = () => setIsDemoOpen(true);
+    window.addEventListener("openDemoModal", handleOpenDemoModal);
+    return () =>
+      window.removeEventListener("openDemoModal", handleOpenDemoModal);
+  }, []);
+
   if (isLoading) {
     return <LoadingScreen />;
   }
@@ -48,6 +70,7 @@ const Home = () => {
   return (
     <Suspense fallback={<LoadingFallback />}>
       <div className="smooth-scroll">
+        <Navbar />
         <HeroSection />
         <StatsSection />
         <ChallengesSection />

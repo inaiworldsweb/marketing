@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/EDINAI Logo (1).png";
+import logo from "../assets/EDINAI Logo.png";
 
 const Footer = ({ onBookDemo }) => {
   return (

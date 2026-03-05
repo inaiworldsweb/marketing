@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 // Custom SVG Icon Components with glow effects
 const NotesIcon = () => (
@@ -364,6 +365,29 @@ const features = [
 ];
 
 const FeaturesSection = ({ onBookDemo }) => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (!isAutoPlaying || !isMobile) return;
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % features.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, isMobile]);
+
+  const nextSlide = () =>
+    setCurrentIndex((prev) => (prev + 1) % features.length);
+  const prevSlide = () =>
+    setCurrentIndex((prev) => (prev - 1 + features.length) % features.length);
   return (
     <section className="bg-black text-white relative overflow-hidden py-16 sm:py-20 px-4 sm:px-8">
       <div
@@ -376,7 +400,7 @@ const FeaturesSection = ({ onBookDemo }) => {
 
       <div className="relative max-w-6xl mx-auto text-center space-y-8">
         <div>
-          <h2 className="text-[25px] md:text-[40px] font-semibold">
+          <h2 className="text-[25px] md:text-[40px] font-bold">
             Virtual AI Teaching Platform Built for Modern Institutions
           </h2>
           <p className="mt-4 text-[15px] md:text-[21px] text-white/90 max-w-4xl mx-auto leading-relaxed">
@@ -387,32 +411,85 @@ const FeaturesSection = ({ onBookDemo }) => {
         </div>
 
         <div className="flex flex-col gap-6">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
-            {features.map(({ title, gradient, glow, icon }) => (
-              <div
-                key={title}
-                className="flex flex-col items-center gap-4 text-center"
+          {isMobile ? (
+            <div
+              className="relative overflow-hidden w-full"
+              onMouseEnter={() => setIsAutoPlaying(false)}
+              onMouseLeave={() => setIsAutoPlaying(true)}
+            >
+              <motion.div
+                className="flex"
+                animate={{ x: -currentIndex * 100 + "%" }}
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
               >
+                {features.map(({ title, gradient, glow, icon }, index) => (
+                  <div
+                    key={index}
+                    className="flex-shrink-0 w-full flex justify-center px-4"
+                  >
+                    <div className="flex flex-col items-center gap-4 text-center max-w-xs">
+                      <div
+                        className={`relative rounded-2xl border border-white/10 bg-black/60 ${glow} flex items-center justify-center overflow-hidden`}
+                      >
+                        <div
+                          className="absolute inset-0 rounded-[26px]"
+                          style={{
+                            backgroundImage:
+                              "radial-gradient(circle, rgba(255,255,255,0.35) 2px, transparent 2px)",
+                            backgroundSize: "40px 40px",
+                            opacity: 0.2,
+                          }}
+                        />
+                        <div className="relative z-10">{icon}</div>
+                      </div>
+                      <p className="text-base sm:text-lg font-semibold text-white leading-snug">
+                        {title}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </motion.div>
+              <button
+                onClick={prevSlide}
+                className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full transition-colors"
+              >
+                ‹
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full transition-colors"
+              >
+                ›
+              </button>
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+              {features.map(({ title, gradient, glow, icon }) => (
                 <div
-                  className={`relative rounded-2xl border border-white/10 bg-black/60 ${glow} flex items-center justify-center overflow-hidden`}
+                  key={title}
+                  className="flex flex-col items-center gap-4 text-center"
                 >
                   <div
-                    className="absolute inset-0 rounded-[26px]"
-                    style={{
-                      backgroundImage:
-                        "radial-gradient(circle, rgba(255,255,255,0.35) 2px, transparent 2px)",
-                      backgroundSize: "40px 40px",
-                      opacity: 0.2,
-                    }}
-                  />
-                  <div className="relative z-10">{icon}</div>
+                    className={`relative rounded-2xl border border-white/10 bg-black/60 ${glow} flex items-center justify-center overflow-hidden`}
+                  >
+                    <div
+                      className="absolute inset-0 rounded-[26px]"
+                      style={{
+                        backgroundImage:
+                          "radial-gradient(circle, rgba(255,255,255,0.35) 2px, transparent 2px)",
+                        backgroundSize: "40px 40px",
+                        opacity: 0.2,
+                      }}
+                    />
+                    <div className="relative z-10">{icon}</div>
+                  </div>
+                  <p className="text-base sm:text-lg font-semibold text-white leading-snug">
+                    {title}
+                  </p>
                 </div>
-                <p className="text-base sm:text-lg font-semibold text-white leading-snug">
-                  {title}
-                </p>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
 
           <div className="mt-8">
             <button

@@ -179,7 +179,7 @@ const KeyFeaturesSection = () => {
 
         {/* Feature Cards Grid - Perfectly Aligned with Lines */}
         <div className="flex justify-center relative z-0">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 max-w-6xl mt-[4px]">
+          <div className="flex flex-col md:flex-row justify-between max-w-6xl mt-[4px] w-full">
             {/* Student Card */}
             <div
               className={`group relative rounded-3xl p-8 md:p-10 transition-all duration-500 cursor-default

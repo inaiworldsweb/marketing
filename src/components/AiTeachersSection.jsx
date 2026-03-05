@@ -32,10 +32,10 @@ const AiTeachersSection = () => {
     >
       <div className="max-w-6xl mx-auto text-center space-y-10">
         <div>
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-[25px] md:text-[40px] font-bold">
             Meet Our AI Teachers
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-white/80 max-w-2xl mx-auto">
+          <p className="mt-3 text-[15px] md:text-[21px] text-white/80 max-w-2xl mx-auto">
             Your always-available digital faculty, delivering clarity, visuals,
             and analytics on demand.
           </p>
@@ -70,7 +70,7 @@ const AiTeachersSection = () => {
         </div>
 
         <div className="mt-12">
-          <button className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 px-6 py-3 text-sm font-semibold shadow-[0_10px_30px_rgba(59,130,246,0.5)]">
+          <button className="inline-flex items-center cursor-pointer justify-center rounded-[7px] bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 px-6 py-3 text-sm font-semibold shadow-[0_10px_30px_rgba(59,130,246,0.5)]">
             Try Virtual AI Teacher
           </button>
         </div>

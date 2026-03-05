@@ -53,14 +53,14 @@ const WhyChooseSection = ({ onBookDemo }) => {
         <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-black/70 to-black/90 shadow-[0_30px_80px_rgba(0,0,0,0.7)] px-4 sm:px-10 py-8 sm:py-12">
           <div className="text-center">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
-              <h2 className="text-4xl md:text-5xl font-bold text-center">
-                Why Institutions Choose
-              </h2>
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent">
+              <h2 className="text-[25px] md:text-[40px] font-bold text-center">
+                Why Institutions Choose <span className="text-[25px] md:text-[40px] font-bold bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent">
                 edInai
+              </span>
               </h2>
+              
             </div>
-            <p className="mt-2 text-xs sm:text-sm text-white/70">
+            <p className="mt-2 text-[15px] md:text-[21px] text-white/70">
               edInai is designed to deliver measurable academic and operational
               impact.
             </p>
@@ -91,7 +91,7 @@ const WhyChooseSection = ({ onBookDemo }) => {
           <div className="mt-10 flex justify-center">
             <button
               onClick={onBookDemo}
-              className="min-h-[44px] rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 px-6 py-2.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.5)] transition"
+              className="cursor-pointer rounded-[7px] bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 px-6 py-2.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.5)] transition"
             >
               Book a Demo
             </button>

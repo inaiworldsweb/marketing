@@ -33,10 +33,10 @@ const HeroSection = () => {
           </h1>
 
           <div className="flex items-stretch justify-center px-2">
-            <div className="border-l-2 border-white pl-3 sm:pl-4 text-white text-center text-base sm:text-xl md:text-2xl lg:text-3xl font-medium leading-snug">
-              For Schools, Colleges & Coaching Institutes |
+            <div className=" text-white text-center text-base sm:text-xl md:text-2xl lg:text-3xl font-medium leading-snug">
+           For Schools, Colleges & Coaching Institutes 
             </div>
-          </div>
+          </div>  
 
           <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
             edInai introduces Virtual AI Teachers that conduct live & recorded
@@ -45,10 +45,10 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 text-white px-8 py-4 font-semibold text-lg transition-all duration-200 shadow-[0_10px_30px_rgba(59,130,246,0.5)]">
+            <button className="inline-flex items-center justify-center cursor-pointer rounded-[7px] bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 text-white px-8 py-4 font-semibold text-lg transition-all duration-200 shadow-[0_10px_30px_rgba(59,130,246,0.5)]">
               Book a Demo Today
             </button>
-            <button className="inline-flex items-center justify-center rounded-full border border-white text-white hover:bg-white/10 px-8 py-4 font-semibold text-lg transition-all duration-200">
+            <button className="inline-flex items-center justify-center cursor-pointer rounded-[7px] border border-white text-white hover:bg-white/10 px-8 py-4 font-semibold text-lg transition-all duration-200">
               Watch How It Works
             </button>
           </div>

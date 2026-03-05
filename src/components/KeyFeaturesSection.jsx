@@ -38,10 +38,10 @@ const KeyFeaturesSection = () => {
         <div className="text-center mb-0 relative z-20">
           <div className="inline-block relative">
             {/* Faint header container if needed, sticking to text for now as per image */}
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-[25px] md:text-[40px] font-bold text-white mb-4">
               Key Features Overview
             </h2>
-            <p className="text-lg text-gray-400 font-medium">
+            <p className="text-[15px] md:text-[21px] text-gray-400 font-medium">
               Built for Academic and Operational Excellence
             </p>
           </div>
@@ -232,14 +232,14 @@ const KeyFeaturesSection = () => {
 
               {/* Content */}
               <div className="relative z-10">
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                <h3 className="text-[17px] md:text-[21px] font-bold text-white mb-6">
                   Student Learning Features
                 </h3>
                 <ul className="space-y-4">
                   {studentFeatures.map((feature, index) => (
                     <li
                       key={index}
-                      className="flex items-start gap-3.5 text-gray-300 text-base md:text-lg group/item transition-all duration-300 hover:text-white"
+                      className="flex items-start gap-3.5 text-gray-300 text-[13px] md:text-[17px] group/item transition-all duration-300 hover:text-white"
                     >
                       <span className="leading-relaxed">{feature}</span>
                     </li>
@@ -300,14 +300,14 @@ const KeyFeaturesSection = () => {
 
               {/* Content */}
               <div className="relative z-10">
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                <h3 className="text-[17px] md:text-[21px] font-bold text-white mb-6">
                   Institutional Features
                 </h3>
                 <ul className="space-y-4">
                   {institutionalFeatures.map((feature, index) => (
                     <li
                       key={index}
-                      className="flex items-start gap-3.5 text-gray-300 text-base md:text-lg group/item transition-all duration-300 hover:text-white"
+                      className="flex items-start gap-3.5 text-gray-300 text-[13px] md:text-[17px] group/item transition-all duration-300 hover:text-white"
                     >
                       <span className="leading-relaxed">{feature}</span>
                     </li>

@@ -26,7 +26,7 @@ const ChallengesSection = () => {
       </div>
 
       <div className="relative max-w-6xl mx-auto">
-        <h1 className="text-center text-[25px] md:text-[40px] md:text-xl font-bold text-white/90 leading-snug">
+        <h1 className="text-center text-[25px] md:text-[40px]  font-bold text-white/90 leading-snug">
           Overcoming Obstacles in Student
           <br />
           Learning and Engagement
@@ -54,7 +54,7 @@ const ChallengesSection = () => {
                 </svg>
               </div>
 
-              <h2 className="text-4xl md:text-[25px] font-semibold text-center mb-8">
+              <h2 className="text-[15px] md:text-[21px] font-semibold text-center mb-8">
                 Key Challenges Facing Educational Institutions Today
               </h2>
 

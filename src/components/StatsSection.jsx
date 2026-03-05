@@ -16,7 +16,7 @@ const StatsSection = () => {
 
       <div className="relative max-w-6xl mx-auto">
         <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/8 to-white/3 backdrop-blur-xl shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_30px_80px_rgba(0,0,0,0.65)] px-8 py-10 md:px-14">
-          <h3 className="text-center text-xl md:text-3xl font-semibold leading-snug text-white">
+          <h3 className="text-center text-[20px] md:text-[35px] font-semibold leading-snug text-white">
             Already helping institutions modernize classrooms with
             <br />
             AI-powered teaching and automation.
@@ -24,9 +24,9 @@ const StatsSection = () => {
 
           <div className="mt-9 grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Violet Card - Institutions Transformed */}
-            <div className="group relative overflow-hidden rounded-xl border border-violet-400/25 bg-black/70 px-6 py-5 text-center shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_0_65px_rgba(124,58,237,0.38)] cursor-pointer transition-all duration-[400ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-[1.03] hover:border-violet-400/50 hover:shadow-[0_0_0_1px_rgba(255,255,255,0.12),0_0_90px_rgba(124,58,237,0.55),0_8px_32px_rgba(124,58,237,0.25)]">
+            <div className="group relative overflow-hidden rounded-[12px] border border-violet-400/25 bg-black/70 px-6 py-5 text-center shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_0_65px_rgba(124,58,237,0.38)] cursor-pointer transition-all duration-[400ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-[1.03] hover:border-violet-400/50 hover:shadow-[0_0_0_1px_rgba(255,255,255,0.12),0_0_20px_rgba(124,58,237,0.55),0_8px_32px_rgba(124,58,237,0.25)]">
               <div
-                className="absolute inset-0 opacity-35 transition-opacity duration-[400ms] group-hover:opacity-50"
+                className="absolute inset-0 opacity-35 transition-opacity duration-[200ms] group-hover:opacity-50"
                 style={{
                   backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.35) 1px, transparent 1px)`,
                   backgroundSize: "18px 18px",
@@ -44,9 +44,9 @@ const StatsSection = () => {
             </div>
 
             {/* Amber Card - Students Learning Daily */}
-            <div className="group relative overflow-hidden rounded-xl border border-amber-400/20 bg-black/70 px-6 py-5 text-center shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_0_65px_rgba(245,158,11,0.34)] cursor-pointer transition-all duration-[400ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-[1.03] hover:border-amber-400/45 hover:shadow-[0_0_0_1px_rgba(255,255,255,0.12),0_0_90px_rgba(245,158,11,0.50),0_8px_32px_rgba(245,158,11,0.22)]">
+            <div className="group relative overflow-hidden rounded-[12px] border border-amber-400/20 bg-black/70 px-6 py-5 text-center shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_0_65px_rgba(245,158,11,0.34)] cursor-pointer transition-all duration-[400ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-[1.03] hover:border-amber-400/45 hover:shadow-[0_0_0_1px_rgba(255,255,255,0.12),0_0_20px_rgba(245,158,11,0.50),0_8px_32px_rgba(245,158,11,0.22)]">
               <div
-                className="absolute inset-0 opacity-35 transition-opacity duration-[400ms] group-hover:opacity-50"
+                className="absolute inset-0 opacity-35 transition-opacity duration-[200ms] group-hover:opacity-50"
                 style={{
                   backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.32) 1px, transparent 1px)`,
                   backgroundSize: "18px 18px",
@@ -64,9 +64,9 @@ const StatsSection = () => {
             </div>
 
             {/* Emerald Card - AI Teaching Support */}
-            <div className="group relative overflow-hidden rounded-xl border border-emerald-400/20 bg-black/70 px-6 py-5 text-center shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_0_65px_rgba(34,197,94,0.34)] cursor-pointer transition-all duration-[400ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-[1.03] hover:border-emerald-400/45 hover:shadow-[0_0_0_1px_rgba(255,255,255,0.12),0_0_90px_rgba(34,197,94,0.50),0_8px_32px_rgba(34,197,94,0.22)]">
+            <div className="group relative overflow-hidden rounded-[12px] border border-emerald-400/20 bg-black/70 px-6 py-5 text-center shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_0_65px_rgba(34,197,94,0.34)] cursor-pointer transition-all duration-[400ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-[1.03] hover:border-emerald-400/45 hover:shadow-[0_0_0_1px_rgba(255,255,255,0.12),0_0_20px_rgba(34,197,94,0.50),0_8px_32px_rgba(34,197,94,0.22)]">
               <div
-                className="absolute inset-0 opacity-35 transition-opacity duration-[400ms] group-hover:opacity-50"
+                className="absolute inset-0 opacity-35 transition-opacity duration-[200ms] group-hover:opacity-50"
                 style={{
                   backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.30) 1px, transparent 1px)`,
                   backgroundSize: "18px 18px",

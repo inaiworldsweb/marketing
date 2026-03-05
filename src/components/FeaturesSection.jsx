@@ -376,10 +376,10 @@ const FeaturesSection = ({ onBookDemo }) => {
 
       <div className="relative max-w-6xl mx-auto text-center space-y-8">
         <div>
-          <h2 className="text-4xl md:text-5xl font-semibold">
+          <h2 className="text-[25px] md:text-[40px] font-semibold">
             Virtual AI Teaching Platform Built for Modern Institutions
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-white/90 max-w-4xl mx-auto leading-relaxed">
+          <p className="mt-4 text-[15px] md:text-[21px] text-white/90 max-w-4xl mx-auto leading-relaxed">
             edInai is an AI-powered virtual teaching platform where intelligent
             AI teachers conduct live and recorded interactive lectures, handle
             student doubts, and track performance — automatically.
@@ -417,7 +417,7 @@ const FeaturesSection = ({ onBookDemo }) => {
           <div className="mt-8">
             <button
               onClick={onBookDemo}
-              className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 px-8 py-4 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.5)] hover:shadow-[0_15px_40px_rgba(59,130,246,0.6)] transition-all duration-300"
+              className="group relative inline-flex items-center justify-center cursor-pointer overflow-hidden rounded-[7px] bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 px-8 py-4 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.5)] hover:shadow-[0_15px_40px_rgba(59,130,246,0.6)] transition-all duration-300"
             >
               <span className="relative z-10">Book a Demo</span>
             </button>

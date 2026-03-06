@@ -53,15 +53,15 @@ const AiTeachersSection = () => {
   return (
     <section
       id="learning-flow"
-      className="bg-black text-white py-16 sm:py-20 px-4 sm:px-6"
+      className="bg-black text-white py-13 sm:py-16 px-4 sm:px-6"
     >
       <div className="max-w-6xl mx-auto text-center space-y-10">
         <div>
-          <h2 className="text-[25px] md:text-[40px] font-bold">
+          <h2 className="text-[25px] md:text-[40px] font-bold mb-4 md:mb-6">
             Meet Our AI Teachers
           </h2>
           <p className="mt-3 text-[15px] md:text-[21px] text-white/80 max-w-2xl mx-auto">
-            Your always-available digital faculty, delivering clarity, visuals,
+            Your always available digital faculty, delivering clarity, visuals,
             and analytics on demand.
           </p>
         </div>

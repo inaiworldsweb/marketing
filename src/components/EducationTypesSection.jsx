@@ -38,7 +38,7 @@ const cards = [
 
 const EducationTypesSection = ({ onBookDemo }) => {
   return (
-    <section className="bg-black text-white relative overflow-hidden py-16 sm:py-20 px-4 sm:px-6">
+    <section className="bg-black text-white relative overflow-hidden py-13 sm:py-16 px-4 sm:px-6">
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute inset-0 opacity-10"
@@ -54,7 +54,7 @@ const EducationTypesSection = ({ onBookDemo }) => {
 
       <div className="relative max-w-6xl mx-auto">
         <div className="text-center">
-          <h2 className="text-[25px] md:text-[40px] font-bold">
+          <h2 className="text-[25px] md:text-[40px] font-bold mb-4 md:mb-6">
             Designed for Every Type of Educational Institution
           </h2>
           <p className="mt-2 text-[15px] md:text-[21px] text-white/70">
@@ -69,7 +69,9 @@ const EducationTypesSection = ({ onBookDemo }) => {
               key={card.title}
               className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/8 via-black/70 to-black/90 shadow-[0_25px_70px_rgba(0,0,0,0.65)] p-6 flex flex-col"
             >
-              <h3 className="text-[22px] font-bold text-blue-400">{card.title}</h3>
+              <h3 className="text-[22px] font-bold text-blue-400">
+                {card.title}
+              </h3>
               <p className="mt-2 text-[11px] md:text-[14px] text-white/60 leading-relaxed">
                 {card.subtitle}
               </p>

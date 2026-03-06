@@ -3,10 +3,10 @@ import logo from "../assets/EDINAI Logo.png";
 
 const Footer = ({ onBookDemo }) => {
   return (
-    <footer className="relative w-full bg-black border-t border-white/10 py-16 sm:py-20 px-4 sm:px-6">
+    <footer className="relative w-full bg-black border-t border-white/10 py-13 sm:py-16 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto px-4 flex flex-col gap-6">
         {/* Logo and Links - Same Row */}
-        <div className="w-full flex  items-center justify-between gap-8">
+        <div className="w-full flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo - Left */}
           <img
             src={logo}
@@ -15,8 +15,42 @@ const Footer = ({ onBookDemo }) => {
             loading="eager"
           />
 
-          {/* Links - Right in a row */}
-          <div className="flex flex-wrap  items-center gap-6">
+          {/* Links - Mobile: Vertical centered, Tablet/Desktop: Horizontal centered */}
+          <div className="flex flex-col items-center justify-center gap-4 mb-6 md:hidden w-full">
+            <a
+              href="#what-is-edinai"
+              className="text-gray-400 text-sm hover:text-white transition-colors text-center"
+            >
+              Ed-INAI Overview
+            </a>
+            <a
+              href="#ai-teachers"
+              className="text-gray-400 text-sm hover:text-white transition-colors text-center"
+            >
+              What is Ed-INAI?
+            </a>
+            <a
+              href="#learning-flow"
+              className="text-gray-400 text-sm hover:text-white transition-colors text-center"
+            >
+              Our AI Teachers
+            </a>
+            <a
+              href="#dashboard-preview"
+              className="text-gray-400 text-sm hover:text-white transition-colors text-center"
+            >
+              Implementation Guide
+            </a>
+            <a
+              href="#watch-demo"
+              className="text-gray-400 text-sm hover:text-white transition-colors text-center"
+            >
+              Watch Live Demo
+            </a>
+          </div>
+
+          {/* Links - Tablet/Desktop: Horizontal centered */}
+          <div className="hidden md:flex flex-wrap items-center justify-center md:justify-center gap-6 mb-5 w-full md:w-auto">
             <a
               href="#what-is-edinai"
               className="text-gray-400 text-sm hover:text-white transition-colors"
@@ -54,12 +88,16 @@ const Footer = ({ onBookDemo }) => {
         <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6">
           <button
             onClick={onBookDemo}
-            className=" rounded-[7px] cursor-pointer bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 px-6 py-2.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.5)] transition"
+            className=" rounded-[7px] cursor-pointer bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 px-2 py-1 lg:px-6 lg:py-2.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.5)] transition"
           >
             Book a Demo
           </button>
           {/* Copyright Text - Left */}
-          <p className="text-gray-400 text-xs md:text-sm text-center md:text-left">
+          <p
+            className="text-gray-400 text-xs md:text-sm text-center md:text-center
+          
+          "
+          >
             © 2026 INAI Worlds Pvt. Ltd. All Rights Reserved
           </p>
 

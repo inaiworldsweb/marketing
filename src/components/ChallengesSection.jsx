@@ -12,7 +12,7 @@ const items = [
 
 const ChallengesSection = () => {
   return (
-    <section className="bg-black text-white relative overflow-hidden py-16 sm:py-20 px-4 sm:px-6">
+    <section className="bg-black text-white relative overflow-hidden py-13 sm:py-16 px-4 sm:px-6">
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute inset-0 opacity-15"
@@ -26,10 +26,15 @@ const ChallengesSection = () => {
       </div>
 
       <div className="relative max-w-6xl mx-auto">
-        <h1 className="text-center text-[25px] md:text-[40px]  font-bold text-white/90 leading-snug">
-          Overcoming Obstacles in Student
-          <br />
-          Learning and Engagement
+        <h1 className="text-center text-[25px] md:text-[40px] font-bold text-white/90 leading-snug mb-4 md:mb-6">
+          <span className="hidden md:inline">
+            Overcoming Obstacles in Student
+            <br />
+          </span>
+          <span className="md:hidden">
+            Overcoming Obstacles in Student Learning and Engagement
+          </span>
+          <span className="hidden md:inline">Learning and Engagement</span>
         </h1>
 
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,520px)] gap-16 lg:gap-24 items-start">

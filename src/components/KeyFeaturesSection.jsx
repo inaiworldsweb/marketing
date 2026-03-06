@@ -20,7 +20,7 @@ const KeyFeaturesSection = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   return (
-    <section className="relative overflow-hidden py-16 sm:py-20 px-4 sm:px-6 bg-black flex flex-col items-center justify-center">
+    <section className="relative overflow-hidden py-13 sm:py-16 px-4 sm:px-6 bg-black flex flex-col items-center justify-center">
       {/* Background Dot Pattern */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">
         <div
@@ -38,7 +38,7 @@ const KeyFeaturesSection = () => {
         <div className="text-center mb-0 relative z-20">
           <div className="inline-block relative">
             {/* Faint header container if needed, sticking to text for now as per image */}
-            <h2 className="text-[25px] md:text-[40px] font-bold text-white mb-4">
+            <h2 className="text-[25px] md:text-[40px] font-bold text-white mb-4 md:mb-6">
               Key Features Overview
             </h2>
             <p className="text-[15px] md:text-[21px] text-gray-400 font-medium">

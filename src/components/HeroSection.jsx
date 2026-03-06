@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <div
       id="what-is-edinai"
-      className="min-h-screen py-16 sm:py-20 px-4 sm:px-6 bg-black text-white relative overflow-hidden"
+      className="min-h-screen py-13 sm:py-16 px-4 sm:px-6 bg-black text-white relative overflow-hidden"
     >
       {/* Background dotted pattern - White dots from WhyChooseUsSection */}
       <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]" />

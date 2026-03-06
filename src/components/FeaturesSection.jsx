@@ -389,7 +389,7 @@ const FeaturesSection = ({ onBookDemo }) => {
   const prevSlide = () =>
     setCurrentIndex((prev) => (prev - 1 + features.length) % features.length);
   return (
-    <section className="bg-black text-white relative overflow-hidden py-16 sm:py-20 px-4 sm:px-6">
+    <section className="bg-black text-white relative overflow-hidden py-13 sm:py-16 px-4 sm:px-6">
       <div
         className="absolute inset-0 pointer-events-none opacity-15"
         style={{
@@ -400,13 +400,13 @@ const FeaturesSection = ({ onBookDemo }) => {
 
       <div className="relative max-w-6xl mx-auto text-center space-y-8">
         <div>
-          <h2 className="text-[25px] md:text-[40px] font-bold">
+          <h2 className="text-[25px] md:text-[40px] font-bold mb-4 md:mb-6">
             Virtual AI Teaching Platform Built for Modern Institutions
           </h2>
           <p className="mt-4 text-[15px] md:text-[21px] text-white/90 max-w-4xl mx-auto leading-relaxed">
             edInai is an AI-powered virtual teaching platform where intelligent
             AI teachers conduct live and recorded interactive lectures, handle
-            student doubts, and track performance — automatically.
+            student doubts, and track performance automatically.
           </p>
         </div>
 

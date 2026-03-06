@@ -33,26 +33,31 @@ const TestimonialsSection = () => {
     },
   ];
 
-  // slide index represents which pair of testimonials to show
+  // slide index represents which testimonial to show
   const [slideIndex, setSlideIndex] = useState(0);
   const [direction, setDirection] = useState(0); // 1 for right, -1 for left
 
-  const slideCount = Math.ceil(testimonials.length / 2);
+  // For mobile: show 1 card, for desktop: show 2 cards
+  const [isMobile, setIsMobile] = useState(false);
 
-  // compute pair to display
-  const startIndex = (slideIndex * 2) % testimonials.length;
-  const displayed = [
-    testimonials[startIndex],
-    testimonials[(startIndex + 1) % testimonials.length],
-  ];
-
-  // Auto-play logic
   useEffect(() => {
-    const timer = setInterval(() => {
-      handleNext();
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [slideIndex]);
+    const checkMobile = () => setIsMobile(window.innerWidth < 640);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const slideCount = isMobile
+    ? testimonials.length
+    : Math.ceil(testimonials.length / 2);
+
+  // compute testimonials to display
+  const displayed = isMobile
+    ? [testimonials[slideIndex % testimonials.length]]
+    : [
+        testimonials[(slideIndex * 2) % testimonials.length],
+        testimonials[(slideIndex * 2 + 1) % testimonials.length],
+      ];
 
   const handleNext = () => {
     setDirection(1);
@@ -63,6 +68,14 @@ const TestimonialsSection = () => {
     setDirection(-1);
     setSlideIndex((prev) => (prev - 1 + slideCount) % slideCount);
   };
+
+  // Auto-play logic
+  useEffect(() => {
+    const timer = setInterval(() => {
+      handleNext();
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [slideIndex]);
 
   const variants = {
     enter: (direction) => ({
@@ -82,11 +95,11 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="py-16 sm:py-20 bg-black text-white overflow-hidden px-4 sm:px-6">
+    <section className="py-13 sm:py-16 bg-black text-white overflow-hidden px-4 sm:px-6">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-[25px] md:text-[40px] font-bold mb-4">
+          <h2 className="text-[25px] md:text-[40px] font-bold mb-4 md:mb-6">
             What our users say about us
           </h2>
           <p className="text-[15px] md:text-[21px] text-white/60 max-w-lg mx-auto">
@@ -130,7 +143,7 @@ const TestimonialsSection = () => {
               {displayed.map((item) => (
                 <div
                   key={item.id}
-                  className="w-full bg-[#0A0A0A] border border-gray-800 rounded-3xl p-8 md:p-10 relative shadow-2xl"
+                  className="w-full bg-[#0A0A0A] border border-gray-800 rounded-3xl p-8 md:p-3 relative shadow-2xl"
                 >
                   <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-blue-600/30 to-purple-600/30 rounded-3xl" />
                   <div className="relative">
@@ -139,7 +152,7 @@ const TestimonialsSection = () => {
                         {item.author.charAt(0)}
                       </div>
                       <div className="text-left flex-1">
-                        <p className="font-bold text-xl text-white">
+                        <p className="font-bold text-[16px] text-white">
                           {item.author}
                         </p>
                         <p className="text-sm text-blue-400/80">{item.role}</p>
@@ -157,7 +170,7 @@ const TestimonialsSection = () => {
                         ))}
                       </div>
                     </div>
-                    <p className="text-[13px] md:text-[17px] text-gray-300 italic leading-relaxed font-light">
+                    <p className="text-[13px] md:text-[15px] lg:text-[17px] text-gray-300 italic leading-relaxed font-light">
                       "{item.text}"
                     </p>
                   </div>
@@ -204,7 +217,7 @@ const TestimonialsSection = () => {
           <div className="flex md:hidden gap-4">
             <button
               onClick={handlePrev}
-              className="p-3 rounded-full border border-gray-800 bg-white/5 active:scale-90"
+              className="p-1 rounded-full border border-gray-800 bg-white/5 active:scale-90"
             >
               <svg
                 width="24"
@@ -219,7 +232,7 @@ const TestimonialsSection = () => {
             </button>
             <button
               onClick={handleNext}
-              className="p-3 rounded-full border border-gray-800 bg-white/5 active:scale-90"
+              className="p-1 md:p-0 rounded-full border border-gray-800 bg-white/5 active:scale-90"
             >
               <svg
                 width="24"

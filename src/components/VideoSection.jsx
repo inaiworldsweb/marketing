@@ -11,18 +11,18 @@ const VideoSection = () => {
   return (
     <section
       id="watch-demo"
-      className="w-full bg-black py-16 sm:py-20 px-4 sm:px-6"
+      className="w-full bg-black py-13 sm:py-16 px-4 sm:px-6"
     >
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col items-center text-center">
           {/* Heading Section */}
-          <h2 className="text-[25px] md:text-[30px] lg:text-[40px] font-bold -mb-4 text-white">
+          <h2 className="text-[25px] md:text-[30px] lg:text-[40px] font-bold text-white">
             This short demo walks you through how INAI, VNAI, and AIRA actually
             work inside a live classroom environment.
           </h2>
 
           {/* Video Section */}
-          <div className="w-full max-w-5xl relative my-1">
+          <div className="w-full max-w-5xl relative">
             <div className="relative aspect-video bg-gray-900 rounded-2xl overflow-hidden">
               {!isVideoPlaying ? (
                 <div

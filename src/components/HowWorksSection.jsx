@@ -572,7 +572,7 @@ const steps = [
 
 const HowWorksSection = () => {
   return (
-    <section className="bg-black text-white relative overflow-hidden py-16 sm:py-20 px-4 sm:px-6">
+    <section className="bg-black text-white relative overflow-hidden py-13 sm:py-16 px-4 sm:px-6">
       {/* Background patterns */}
       <div className="absolute inset-0 pointer-events-none">
         <div
@@ -589,7 +589,7 @@ const HowWorksSection = () => {
 
       <div className="relative max-w-6xl mx-auto text-center space-y-12">
         <div>
-          <h2 className="text-[25px] md:text-[40px] font-bold">
+          <h2 className="text-[25px] md:text-[40px] font-bold mb-4 md:mb-6">
             How{" "}
             <span className="text-[25px] md:text-[40px] font-bold bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent">
               edInai

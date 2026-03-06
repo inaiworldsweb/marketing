@@ -34,7 +34,7 @@ const ImplementationSection = () => {
   return (
     <section
       id="dashboard-preview"
-      className="relative overflow-hidden py-16 sm:py-20 px-4 sm:px-6 bg-black"
+      className="relative overflow-hidden py-13 sm:py-16 px-4 sm:px-6 bg-black"
     >
       {/* Dot pattern background on right */}
       <div className="absolute right-0 top-0 w-1/3 h-full pointer-events-none opacity-30">
@@ -52,7 +52,7 @@ const ImplementationSection = () => {
           <span className="inline-block px-4 py-1.5 text-xs font-medium text-blue-300 bg-blue-900/30 rounded-full border border-blue-500/20">
             Implementation Process
           </span>
-          <h2 className="text-[25px] md:text-[40px] font-bold text-white">
+          <h2 className="text-[25px] md:text-[40px] font-bold text-white mb-4 md:mb-6">
             How to Get Started with{" "}
             <span className="bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent">
               edInai

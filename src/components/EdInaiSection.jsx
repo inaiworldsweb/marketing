@@ -29,7 +29,7 @@ const EdInaiSection = () => {
   return (
     <section
       id="ai-teachers"
-      className="bg-[#080810] text-white relative overflow-hidden py-16 sm:py-20 px-4 sm:px-6"
+      className="bg-[#080810] text-white relative overflow-hidden py-13 sm:py-16 px-4 sm:px-6"
     >
       {/* Dot pattern background */}
       <div
@@ -42,7 +42,7 @@ const EdInaiSection = () => {
 
       <div className="relative max-w-6xl mx-auto text-center space-y-8 sm:space-y-16">
         <div>
-          <h2 className="text-[25px] md:text-[40px] font-bold">
+          <h2 className="text-[25px] md:text-[40px] font-bold mb-4 md:mb-6">
             What is{" "}
             <span className="font-bold bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent">
               edInai

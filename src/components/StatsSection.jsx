@@ -35,7 +35,7 @@ const StatsSection = () => {
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(124,58,237,0.18),transparent_58%)] transition-all duration-[400ms] group-hover:bg-[radial-gradient(ellipse_at_center,rgba(124,58,237,0.32),transparent_65%)]" />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(124,58,237,0.20),transparent_55%)] transition-all duration-[400ms] group-hover:bg-[linear-gradient(180deg,rgba(124,58,237,0.35),transparent_60%)]" />
               <div className="absolute inset-0 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06),inset_0_0_28px_rgba(124,58,237,0.18)] transition-all duration-[400ms] group-hover:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12),inset_0_0_45px_rgba(124,58,237,0.32)]" />
-              <div className="relative text-4xl md:text-5xl font-medium  transition-transform duration-[400ms] group-hover:scale-[1.02]">
+              <div className="relative text-[15px] md:text-[28px] lg:text-5xl font-medium  transition-transform duration-[400ms] group-hover:scale-[1.02]">
                 500+
               </div>
               <div className="relative mt-2 text-sm md:text-base text-white/80 transition-colors duration-[400ms] group-hover:text-white/95">
@@ -55,7 +55,7 @@ const StatsSection = () => {
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(245,158,11,0.14),transparent_58%)] transition-all duration-[400ms] group-hover:bg-[radial-gradient(ellipse_at_center,rgba(245,158,11,0.28),transparent_65%)]" />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(245,158,11,0.18),transparent_55%)] transition-all duration-[400ms] group-hover:bg-[linear-gradient(180deg,rgba(245,158,11,0.32),transparent_60%)]" />
               <div className="absolute inset-0 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06),inset_0_0_28px_rgba(245,158,11,0.14)] transition-all duration-[400ms] group-hover:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12),inset_0_0_45px_rgba(245,158,11,0.28)]" />
-              <div className="relative text-4xl md:text-5xl font-medium  transition-transform duration-[400ms] group-hover:scale-[1.02]">
+              <div className="relative text-[15px] md:text-[28px] lg:text-5xl font-medium  transition-transform duration-[400ms] group-hover:scale-[1.02]">
                 50,000+
               </div>
               <div className="relative mt-2 text-sm md:text-base text-white/80 transition-colors duration-[400ms] group-hover:text-white/95">
@@ -75,7 +75,7 @@ const StatsSection = () => {
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(34,197,94,0.14),transparent_58%)] transition-all duration-[400ms] group-hover:bg-[radial-gradient(ellipse_at_center,rgba(34,197,94,0.28),transparent_65%)]" />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(34,197,94,0.18),transparent_55%)] transition-all duration-[400ms] group-hover:bg-[linear-gradient(180deg,rgba(34,197,94,0.32),transparent_60%)]" />
               <div className="absolute inset-0 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06),inset_0_0_28px_rgba(34,197,94,0.14)] transition-all duration-[400ms] group-hover:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12),inset_0_0_45px_rgba(34,197,94,0.28)]" />
-              <div className="relative text-4xl md:text-5xl font-medium  transition-transform duration-[400ms] group-hover:scale-[1.02]">
+              <div className="relative text-[15px] md:text-[28px] lg:text-5xl font-medium  transition-transform duration-[400ms] group-hover:scale-[1.02]">
                 24/7
               </div>
               <div className="relative mt-2 text-sm md:text-base text-white/80 transition-colors duration-[400ms] group-hover:text-white/95">

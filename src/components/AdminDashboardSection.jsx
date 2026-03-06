@@ -237,7 +237,7 @@ const AdminDashboardSection = () => {
                     {feature.icon}
                   </div>
                 </div>
-                <p className="text-gray-200 group-hover:text-white transition-colors duration-300">
+                <p className="text-gray-200 text-[13px] sm:text-[16px] group-hover:text-white transition-colors duration-300">
                   {feature.title}
                 </p>
               </div>

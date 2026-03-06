@@ -168,7 +168,7 @@ const PersonalizedLearningSection = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-gray-200 group-hover:text-white transition-colors duration-300">
+                  <h3 className="sm:text-[16px] text-[13px] font-medium text-gray-200 group-hover:text-white transition-colors duration-300">
                     {feature.title}
                   </h3>
                 </div>

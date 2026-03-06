@@ -601,18 +601,17 @@ const HowWorksSection = () => {
           </p>
         </div>
 
+        {/* Updated Grid for Centering in Tablet (sm) View */}
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-          {steps.map((step) => (
+          {steps.map((step, index) => (
             <div
               key={step.title}
-              className={`rounded-2xl border ${step.color} bg-black/60 backdrop-blur-xl flex flex-col items-center justify-center p-6 gap-4 group transition-all duration-300 hover:scale-105 hover:-translate-y-1`}
+              className={`rounded-2xl border ${step.color} bg-black/60 backdrop-blur-xl flex flex-col items-center justify-center p-6 gap-4 group transition-all duration-300 hover:scale-105 hover:-translate-y-1
+                ${index === steps.length - 1 ? "sm:col-span-2 lg:col-span-1" : ""}`}
             >
-              {/* Icon Container with Glow */}
-              {/* <div className="relative flex items-center justify-center"> */}
               <div
                 className={`relative rounded-2xl border border-white/10 bg-black/60 ${step.color} flex items-center justify-center overflow-hidden`}
               >
-                {/* <div className="absolute inset-0 rounded-full bg-white/5 blur-xl group-hover:bg-white/10 transition-colors" /> */}
                 <div
                   className="absolute inset-0 rounded-[26px]"
                   style={{
@@ -625,7 +624,7 @@ const HowWorksSection = () => {
                 <div className="relative z-10">{step.icon}</div>
               </div>
 
-              <p className="text-[13px] sm:text-[14px] font-medium text-white/90 leading-tight text-center">
+              <p className="text-[13px] sm:text-[14px] font-medium text-white/90 leading-tight text-center max-w-[200px]">
                 {step.title}
               </p>
             </div>

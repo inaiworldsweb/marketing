@@ -54,7 +54,7 @@ const ChallengesSection = () => {
                 </svg>
               </div>
 
-              <h2 className="text-[15px] md:text-[21px] font-semibold text-center mb-8">
+              <h2 className="text-[15px] md:text-[21px] font-semibold text-start mb-8">
                 Key Challenges Facing Educational Institutions Today
               </h2>
 

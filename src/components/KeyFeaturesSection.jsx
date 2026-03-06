@@ -20,7 +20,7 @@ const KeyFeaturesSection = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   return (
-    <section className="relative overflow-hidden py-16 sm:py-20 px-4 sm:px-8 bg-black flex flex-col items-center justify-center">
+    <section className="relative overflow-hidden py-16 sm:py-20 px-4 sm:px-6 bg-black flex flex-col items-center justify-center">
       {/* Background Dot Pattern */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">
         <div

@@ -82,7 +82,7 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="py-16 sm:py-20 bg-black text-white overflow-hidden">
+    <section className="py-16 sm:py-20 bg-black text-white overflow-hidden px-4 sm:px-6">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">

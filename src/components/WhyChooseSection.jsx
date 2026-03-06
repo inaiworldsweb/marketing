@@ -66,22 +66,22 @@ const WhyChooseSection = ({ onBookDemo }) => {
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
             {highlights.slice(0, 3).map((item) => (
               <div
                 key={item.title}
-                className={`rounded-xl border ${item.base} ${item.hover} bg-gradient-to-br p-6 text-center text-sm font-medium text-white/90 min-h-[110px] flex items-center justify-center cursor-pointer transition-all duration-[350ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-[1.04] hover:text-white`}
+                className={`rounded-xl border ${item.base} ${item.hover} bg-gradient-to-br  text-center text-md font-medium text-white/90 min-h-[70px] flex items-center justify-center cursor-pointer transition-all duration-[350ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-[1.04] hover:text-white`}
               >
                 {item.title}
               </div>
             ))}
           </div>
 
-          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {highlights.slice(3).map((item) => (
               <div
                 key={item.title}
-                className={`rounded-xl border ${item.base} ${item.hover} bg-gradient-to-br p-6 text-center text-sm font-medium text-white/90 min-h-[110px] flex items-center justify-center cursor-pointer transition-all duration-[350ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-[1.04] hover:text-white`}
+                className={`rounded-xl border ${item.base} ${item.hover} bg-gradient-to-br text-center text-md font-medium text-white/90 min-h-[70px] flex items-center justify-center cursor-pointer transition-all duration-[350ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-[1.04] hover:text-white`}
               >
                 {item.title}
               </div>

@@ -12,7 +12,7 @@ const items = [
 
 const ChallengesSection = () => {
   return (
-    <section className="bg-black text-white relative overflow-hidden py-16 sm:py-20 px-6">
+    <section className="bg-black text-white relative overflow-hidden py-16 sm:py-20 px-4 sm:px-6">
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute inset-0 opacity-15"
@@ -62,7 +62,7 @@ const ChallengesSection = () => {
                 {items.map((text) => (
                   <div
                     key={text}
-                    className="challenge-item px-6 py-4 text-[13px] md:text-[15px] font-medium  text-white/90 min-h-[56px] cursor-pointer transition-all duration-300"
+                    className="challenge-item px-6 py-0 md:py-2 text-[11px] md:text-[15px] font-medium  text-white/90  cursor-pointer transition-all duration-300"
                   >
                     <div className="flex items-center gap-4">
                       <span className="text-white/85 w-5 text-center text-[12px] md:text-[15px]">

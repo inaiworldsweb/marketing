@@ -389,7 +389,7 @@ const FeaturesSection = ({ onBookDemo }) => {
   const prevSlide = () =>
     setCurrentIndex((prev) => (prev - 1 + features.length) % features.length);
   return (
-    <section className="bg-black text-white relative overflow-hidden py-16 sm:py-20 px-4 sm:px-8">
+    <section className="bg-black text-white relative overflow-hidden py-16 sm:py-20 px-4 sm:px-6">
       <div
         className="absolute inset-0 pointer-events-none opacity-15"
         style={{
@@ -494,7 +494,7 @@ const FeaturesSection = ({ onBookDemo }) => {
           <div className="mt-8">
             <button
               onClick={onBookDemo}
-              className="group relative inline-flex items-center justify-center cursor-pointer overflow-hidden rounded-[7px] bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 px-8 py-4 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.5)] hover:shadow-[0_15px_40px_rgba(59,130,246,0.6)] transition-all duration-300"
+              className="group relative inline-flex items-center justify-center cursor-pointer overflow-hidden rounded-[7px] bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 px-3 py-2 md:py-4 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.5)] hover:shadow-[0_15px_40px_rgba(59,130,246,0.6)] transition-all duration-300"
             >
               <span className="relative z-10">Book a Demo</span>
             </button>

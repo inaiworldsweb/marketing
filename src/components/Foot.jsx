@@ -3,10 +3,10 @@ import logo from "../assets/EDINAI Logo.png";
 
 const Footer = ({ onBookDemo }) => {
   return (
-    <footer className="relative w-full bg-black border-t border-white/10 py-16 sm:py-20">
-      <div className="max-w-5xl mx-auto px-4 flex flex-col gap-6">
+    <footer className="relative w-full bg-black border-t border-white/10 py-16 sm:py-20 px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto px-4 flex flex-col gap-6">
         {/* Logo and Links - Same Row */}
-        <div className="w-full flex md:ms-8 items-center justify-between gap-8">
+        <div className="w-full flex  items-center justify-between gap-8">
           {/* Logo - Left */}
           <img
             src={logo}

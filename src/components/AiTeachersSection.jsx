@@ -53,7 +53,7 @@ const AiTeachersSection = () => {
   return (
     <section
       id="learning-flow"
-      className="bg-black text-white py-16 sm:py-20 px-4 sm:px-8"
+      className="bg-black text-white py-16 sm:py-20 px-4 sm:px-6"
     >
       <div className="max-w-6xl mx-auto text-center space-y-10">
         <div>

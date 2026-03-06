@@ -2,7 +2,7 @@ import React from "react";
 
 const StatsSection = () => {
   return (
-    <section className="bg-black text-white relative overflow-hidden py-16 sm:py-20 px-6">
+    <section className="bg-black text-white relative overflow-hidden py-16 sm:py-20 px-4 sm:px-6">
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute inset-0 opacity-10"
@@ -16,7 +16,7 @@ const StatsSection = () => {
 
       <div className="relative max-w-6xl mx-auto">
         <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/8 to-white/3 backdrop-blur-xl shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_30px_80px_rgba(0,0,0,0.65)] px-8 py-10 md:px-14">
-          <h3 className="text-center text-[20px] md:text-[35px] font-semibold leading-snug text-white">
+          <h3 className="text-center text-[20px] md:text-[35px] font-bold leading-snug text-white">
             Already helping institutions modernize classrooms with
             <br />
             AI-powered teaching and automation.

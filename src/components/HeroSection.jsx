@@ -5,13 +5,13 @@ const HeroSection = () => {
   return (
     <div
       id="what-is-edinai"
-      className="min-h-screen pt-10 bg-black text-white relative overflow-hidden"
+      className="min-h-screen py-16 sm:py-20 px-4 sm:px-6 bg-black text-white relative overflow-hidden"
     >
       {/* Background dotted pattern - White dots from WhyChooseUsSection */}
       <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]" />
 
       {/* Main Content */}
-      <main className="relative z-10 flex items-center justify-center min-h-[calc(100vh-80px)] px-4 sm:px-8 py-6 sm:py-12">
+      <main className="relative z-10 flex items-center justify-center min-h-[calc(100vh-80px)] px-4 sm:px-8">
         <div className="max-w-6xl mx-auto text-center space-y-6">
           <h1 className="text-4xl sm:text-6xl lg:text-8xl font-black leading-tight ">
             India's <span className="">First</span> Virtual

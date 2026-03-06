@@ -572,7 +572,7 @@ const steps = [
 
 const HowWorksSection = () => {
   return (
-    <section className="bg-black text-white relative overflow-hidden py-16 sm:py-20 px-4 sm:px-8">
+    <section className="bg-black text-white relative overflow-hidden py-16 sm:py-20 px-4 sm:px-6">
       {/* Background patterns */}
       <div className="absolute inset-0 pointer-events-none">
         <div
@@ -589,9 +589,13 @@ const HowWorksSection = () => {
 
       <div className="relative max-w-6xl mx-auto text-center space-y-12">
         <div>
-          <h2 className="text-[25px] md:text-[40px] font-bold">How <span className="text-[25px] md:text-[40px] font-bold bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent">
-                edInai
-              </span> Works</h2>
+          <h2 className="text-[25px] md:text-[40px] font-bold">
+            How{" "}
+            <span className="text-[25px] md:text-[40px] font-bold bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700 bg-clip-text text-transparent">
+              edInai
+            </span>{" "}
+            Works
+          </h2>
           <p className="mt-4 text-[15px] sm:text-[21px] text-white/60">
             Simple setup. Powerful results.
           </p>

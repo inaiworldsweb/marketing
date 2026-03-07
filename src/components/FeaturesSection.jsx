@@ -410,7 +410,7 @@ const FeaturesSection = ({ onBookDemo }) => {
           </p>
         </div>
 
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-4">
           {isMobile ? (
             <div
               className="relative overflow-hidden w-full"
@@ -425,7 +425,7 @@ const FeaturesSection = ({ onBookDemo }) => {
                 {features.map(({ title, gradient, glow, icon }, index) => (
                   <div
                     key={index}
-                    className="flex-shrink-0 w-full flex justify-center px-4"
+                    className="flex-shrink-0 w-full flex py-4 justify-center px-4"
                   >
                     <div className="flex flex-col items-center gap-4 text-center max-w-xs">
                       <div
@@ -491,7 +491,7 @@ const FeaturesSection = ({ onBookDemo }) => {
             </div>
           )}
 
-          <div className="mt-8">
+          <div className="mt-4">
             <button
               onClick={onBookDemo}
               className="group relative inline-flex items-center justify-center cursor-pointer overflow-hidden rounded-[7px] bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 px-3 py-2 md:py-4 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(59,130,246,0.5)] hover:shadow-[0_15px_40px_rgba(59,130,246,0.6)] transition-all duration-300"

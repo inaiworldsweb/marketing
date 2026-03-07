@@ -48,7 +48,7 @@ const ImplementationSection = () => {
       </div>
 
       <div className="relative max-w-6xl mx-auto">
-        <div className="text-center space-y-4 mb-16">
+        <div className="text-center space-y-4 mb-1 md:mb-16">
           <span className="inline-block px-4 py-1.5 text-xs font-medium text-blue-300 bg-blue-900/30 rounded-full border border-blue-500/20">
             Implementation Process
           </span>

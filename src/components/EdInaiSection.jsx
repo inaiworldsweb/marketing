@@ -59,7 +59,7 @@ const EdInaiSection = () => {
         {/* Cards Grid with Background Numbers */}
         <div className="relative grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {cards.map(({ title, description, number, icon }) => (
-            <div key={title} className="relative pt-12">
+            <div key={title} className="relative pt-4 md:pt-12">
               {/* Large Background Number - positioned ABOVE the card */}
               <div
                 className="hidden md:block absolute -top-12 left-6 text-[120px] sm:text-[140px] font-black select-none pointer-events-none leading-none z-0"

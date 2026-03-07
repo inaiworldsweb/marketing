@@ -112,7 +112,7 @@ const TestimonialsSection = () => {
           {/* Navigation Buttons (Desktop) */}
           <button
             onClick={handlePrev}
-            className="hidden md:flex absolute -left-16 z-20 w-10 h-12 rounded-full border border-gray-700 items-center justify-center hover:bg-white/10 transition-all"
+            className="hidden md:flex absolute -left-16 z-20 w-12 h-12 rounded-full border border-gray-700 items-center justify-center hover:bg-white/10 transition-all"
           >
             <svg
               width="24"

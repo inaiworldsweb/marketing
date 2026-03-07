@@ -389,7 +389,7 @@ const FeaturesSection = ({ onBookDemo }) => {
   const prevSlide = () =>
     setCurrentIndex((prev) => (prev - 1 + features.length) % features.length);
   return (
-    <section className="bg-black text-white relative overflow-hidden py-13 sm:py-16 px-4 sm:px-6">
+    <section className="bg-black text-white relative overflow-hidden py-10 sm:py-16 px-4 sm:px-6">
       <div
         className="absolute inset-0 pointer-events-none opacity-15"
         style={{

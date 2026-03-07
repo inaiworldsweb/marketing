@@ -29,7 +29,7 @@ const EdInaiSection = () => {
   return (
     <section
       id="ai-teachers"
-      className="bg-[#080810] text-white relative overflow-hidden py-13 sm:py-16 px-4 sm:px-6"
+      className="bg-[#080810] text-white relative overflow-hidden py-10 sm:py-16 px-4 sm:px-6"
     >
       {/* Dot pattern background */}
       <div

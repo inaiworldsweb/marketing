@@ -11,7 +11,7 @@ const VideoSection = () => {
   return (
     <section
       id="watch-demo"
-      className="w-full bg-black py-13 sm:py-16 px-4 sm:px-6"
+      className="w-full bg-black py-10 sm:py-16 px-4 sm:px-6"
     >
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col items-center text-center">

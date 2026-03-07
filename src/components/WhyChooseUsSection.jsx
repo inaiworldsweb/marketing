@@ -3,7 +3,7 @@ import FAQImage from "../assets/FAQ.svg";
 
 const HeroSection = ({ onBookDemo }) => {
   return (
-    <section className="relative py-13 sm:py-16 px-4 sm:px-6 bg-black overflow-hidden">
+    <section className="relative py-10 sm:py-16 px-4 sm:px-6 bg-black overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-[#050b1a] to-black" />
 

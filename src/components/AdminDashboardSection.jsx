@@ -202,7 +202,7 @@ const features = [
 
 const AdminDashboardSection = () => {
   return (
-    <section className="bg-gradient-to-br from-[#0F172A] via-black to-[#1E293B] text-white py-13 sm:py-16 px-4 sm:px-6">
+    <section className="bg-gradient-to-br from-[#0F172A] via-black to-[#1E293B] text-white py-10 sm:py-16 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-[25px] md:text-[40px] font-bold mb-3 md:mb-6">

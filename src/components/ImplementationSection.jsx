@@ -34,7 +34,7 @@ const ImplementationSection = () => {
   return (
     <section
       id="dashboard-preview"
-      className="relative overflow-hidden py-13 sm:py-16 px-4 sm:px-6 bg-black"
+      className="relative overflow-hidden py-10 sm:py-16 px-4 sm:px-6 bg-black"
     >
       {/* Dot pattern background on right */}
       <div className="absolute right-0 top-0 w-1/3 h-full pointer-events-none opacity-30">

@@ -98,7 +98,7 @@ const TestimonialsSection = () => {
     <section className="py-13 sm:py-16 bg-black text-white overflow-hidden px-4 sm:px-6">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center md:mb-12 mb-2">
           <h2 className="text-[25px] md:text-[40px] font-bold mb-4 md:mb-6">
             What our users say about us
           </h2>

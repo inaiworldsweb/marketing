@@ -70,7 +70,7 @@ const WhyChooseSection = ({ onBookDemo }) => {
             {highlights.slice(0, 3).map((item) => (
               <div
                 key={item.title}
-                className={`rounded-xl border ${item.base} ${item.hover} bg-gradient-to-br  text-center text-md font-medium text-white/90 min-h-[70px] flex items-center justify-center cursor-pointer transition-all duration-[350ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-[1.04] hover:text-white`}
+                className={`rounded-xl border ${item.base} ${item.hover} bg-gradient-to-br  text-center md:text-[16px] text-[13px] font-medium text-white/90 min-h-[65px] flex items-center justify-center cursor-pointer transition-all duration-[350ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-[1.04] hover:text-white`}
               >
                 {item.title}
               </div>
@@ -81,7 +81,7 @@ const WhyChooseSection = ({ onBookDemo }) => {
             {highlights.slice(3).map((item) => (
               <div
                 key={item.title}
-                className={`rounded-xl border ${item.base} ${item.hover} bg-gradient-to-br text-center text-md font-medium text-white/90 min-h-[70px] flex items-center justify-center cursor-pointer transition-all duration-[350ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-[1.04] hover:text-white`}
+                className={`rounded-xl border ${item.base} ${item.hover} bg-gradient-to-br text-center md:text-[16px] text-[13px] font-medium text-white/90 min-h-[65px] flex items-center justify-center cursor-pointer transition-all duration-[350ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:scale-[1.04] hover:text-white`}
               >
                 {item.title}
               </div>

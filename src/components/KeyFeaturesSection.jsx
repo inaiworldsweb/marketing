@@ -235,11 +235,11 @@ const KeyFeaturesSection = () => {
                 <h3 className="text-[17px] md:text-[21px] font-bold text-white mb-6">
                   Student Learning Features
                 </h3>
-                <ul className="space-y-4">
+                <ul className="space-y-2">
                   {studentFeatures.map((feature, index) => (
                     <li
                       key={index}
-                      className="flex items-start gap-3.5 text-gray-300 text-[13px] md:text-[17px] group/item transition-all duration-300 hover:text-white"
+                      className="flex items-start gap-1 text-gray-300 text-[13px] md:text-[16px] group/item transition-all duration-300 hover:text-white"
                     >
                       <span className="leading-relaxed">{feature}</span>
                     </li>
@@ -303,11 +303,11 @@ const KeyFeaturesSection = () => {
                 <h3 className="text-[17px] md:text-[21px] font-bold text-white mb-6">
                   Institutional Features
                 </h3>
-                <ul className="space-y-4">
+                <ul className="space-y-2">
                   {institutionalFeatures.map((feature, index) => (
                     <li
                       key={index}
-                      className="flex items-start gap-3.5 text-gray-300 text-[13px] md:text-[17px] group/item transition-all duration-300 hover:text-white"
+                      className="flex items-start gap-1 text-gray-300 text-[13px] md:text-[16px] group/item transition-all duration-300 hover:text-white"
                     >
                       <span className="leading-relaxed">{feature}</span>
                     </li>

@@ -70,8 +70,8 @@ const Home = () => {
   return (
     <Suspense fallback={<LoadingFallback />}>
       <div className="smooth-scroll">
-        <Navbar />
-        <HeroSection />
+        <Navbar onBookDemo={() => setIsDemoOpen(true)} />
+        <HeroSection onBookDemo={() => setIsDemoOpen(true)} />
         <StatsSection />
         <ChallengesSection />
         <FeaturesSection onBookDemo={() => setIsDemoOpen(true)} />

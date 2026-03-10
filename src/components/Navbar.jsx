@@ -50,7 +50,7 @@ function Navbar({ onBookDemo }) {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Demo
+            Get Demo
           </motion.button>
         </div>
       </motion.nav>

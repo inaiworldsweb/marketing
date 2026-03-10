@@ -1,7 +1,7 @@
 import React from "react";
 import EdinaiLogo from "../assets/EDINAI Logo.png";
 
-const HeroSection = () => {
+const HeroSection = ({ onBookDemo }) => {
   return (
     <div
       id="what-is-edinai"
@@ -32,10 +32,21 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-row gap-4 justify-center">
-            <button className="inline-flex items-center justify-center cursor-pointer rounded-[7px] bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 text-white px-2 py-1 md:py-4 md:px-7 text-[13px] font-semibold text-lg transition-all duration-200 shadow-[0_10px_30px_rgba(59,130,246,0.5)]">
+            <button
+              onClick={onBookDemo}
+              className="inline-flex items-center justify-center cursor-pointer rounded-[7px] bg-gradient-to-r from-blue-500 to-indigo-500 hover:opacity-90 text-white px-2 py-1 md:py-4 md:px-7 text-[13px] font-semibold text-lg transition-all duration-200 shadow-[0_10px_30px_rgba(59,130,246,0.5)]"
+            >
               Book a Demo Today
             </button>
-            <button className="inline-flex items-center justify-center cursor-pointer rounded-[7px] border border-white text-white hover:bg-white/10 px-2 py-1 md:py-4 md:px-7 font-semibold text-[13px] transition-all duration-200">
+            <button
+              onClick={() => {
+                const element = document.getElementById("watch-demo");
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+              className="inline-flex items-center justify-center cursor-pointer rounded-[7px] border border-white text-white hover:bg-white/10 px-2 py-1 md:py-4 md:px-7 font-semibold text-[13px] transition-all duration-200"
+            >
               Watch How It Works
             </button>
           </div>

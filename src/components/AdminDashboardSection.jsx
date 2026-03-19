@@ -1,206 +1,60 @@
-import React from "react";
-import adminImage from "../assets/admin.png";
+import React, { useState } from "react";
 
+
+import visualProgressImage from "../assets/Admin Dashboard Preview/Visual-progress-tracking-and-improvement-insights.webp";
+import scheduleMonitorImage from "../assets/Admin Dashboard Preview/Schedule-and-monitor-lectures.webp";
+import completionStatusImage from "../assets/Admin Dashboard Preview/Monitor-lecture-completion-status.webp";
+import performanceTrendsImage from "../assets/Admin Dashboard Preview/Analyze-student-performance-trends.webp";
 const features = [
   {
+    id: 1,
     title: "Visual progress tracking and improvement insights",
     icon: (
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M3 3V21H21"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M18 6L15 10L11 7L7 13L6 12"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 3v18h18" /><path d="m19 9-5 5-4-4-3 3" />
       </svg>
     ),
     color: "text-blue-400",
+    image: visualProgressImage,
   },
   {
+    id: 2,
     title: "Schedule and monitor lectures",
     icon: (
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M16 2V6"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M8 2V6"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M3 10H21"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    ),
-    color: "text-purple-400",
-  },
-  {
-    title: "Track attendance and engagement",
-    icon: (
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M16 21V19C16 17.9391 15.5786 16.9217 14.8284 16.1716C14.0783 15.4214 13.0609 15 12 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M8.5 11C10.7091 11 12.5 9.20914 12.5 7C12.5 4.79086 10.7091 3 8.5 3C6.29086 3 4.5 4.79086 4.5 7C4.5 9.20914 6.29086 11 8.5 11Z"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M20 8V14"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M23 11H17"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    ),
-    color: "text-green-400",
-  },
-  {
-    title: "Analyze student performance trends",
-    icon: (
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M18 20V10"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M12 20V4"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M6 20V14"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
       </svg>
     ),
     color: "text-yellow-400",
+    image: scheduleMonitorImage,
   },
   {
-    title: "Access reports for academic decision-making",
+    id: 3,
+    title: "Monitor lecture completion status",
     icon: (
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M14 2V8H20"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M16 13H8"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M16 17H8"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M10 9H9H8"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" /><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
       </svg>
     ),
-    color: "text-red-400",
+    color: "text-green-400",
+    image: completionStatusImage,
+  },
+  {
+    id: 4,
+    title: "Analyze student performance trends",
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M15 3h6v6" /><path d="M10 14L21 3" /><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+      </svg>
+    ),
+    color: "text-purple-400",
+    image: performanceTrendsImage,
   },
 ];
 
 const AdminDashboardSection = () => {
+  const [activeFeature, setActiveFeature] = useState(features[0]);
+
   return (
     <section className="bg-gradient-to-br from-[#0F172A] via-black to-[#1E293B] text-white py-10 sm:py-16 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
@@ -213,31 +67,35 @@ const AdminDashboardSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Dashboard Preview */}
-          <div className="overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Dashboard Preview - Image side */}
+          <div className="relative overflow-hidden rounded-2xl border border-gray-700/30 bg-gray-900/50 aspect-[16/10] flex items-center justify-center">
             <img
-              src={adminImage}
-              alt="Admin Dashboard"
-              className="w-full h-full rounded-2xl  object-cover"
+              key={activeFeature.id} // Key forces re-render for animation
+              src={activeFeature.image}
+              alt={activeFeature.title}
+              className="w-full h-full object-contain animate-in fade-in zoom-in duration-500"
             />
           </div>
 
           {/* Features List */}
           <div className="space-y-4">
-            {features.map((feature, index) => (
+            {features.map((feature) => (
               <div
-                key={index}
-                className="flex items-center space-x-4 p-4 bg-gray-800/50 rounded-xl border border-gray-700/50 hover:border-blue-500/50 hover:bg-gray-800/80 hover:shadow-[0_8px_30px_rgba(59,130,246,0.15)] hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 ease-out cursor-default group"
+                key={feature.id}
+                onClick={() => setActiveFeature(feature)}
+                className={`flex items-center space-x-4 p-5 rounded-xl border transition-all duration-300 ease-out cursor-pointer group ${activeFeature.id === feature.id
+                  ? "bg-gray-800/80 border-blue-500/50 shadow-[0_8px_30px_rgba(59,130,246,0.15)] translate-x-2"
+                  : "bg-gray-800/30 border-gray-700/50 hover:bg-gray-800/50"
+                  }`}
               >
                 <div
-                  className={`${feature.color} p-2.5 rounded-lg bg-gray-700/50 group-hover:bg-gray-700 group-hover:shadow-[0_0_20px_currentColor] transition-all duration-300`}
+                  className={`${feature.color} p-2.5 rounded-lg bg-gray-700/50 group-hover:shadow-[0_0_15px_currentColor] transition-all duration-300`}
                 >
-                  <div className="group-hover:scale-110 transition-transform duration-300">
-                    {feature.icon}
-                  </div>
+                  {feature.icon}
                 </div>
-                <p className="text-gray-200 text-[13px] sm:text-[16px] group-hover:text-white transition-colors duration-300">
+                <p className={`text-[14px] sm:text-[17px] transition-colors duration-300 ${activeFeature.id === feature.id ? "text-white font-medium" : "text-gray-400"
+                  }`}>
                   {feature.title}
                 </p>
               </div>

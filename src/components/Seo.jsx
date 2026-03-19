@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-const Seo = ({ title, description, keywords, noIndex = false, urlSlug }) => {
+const Seo = ({ title, description, keywords, noIndex = true, urlSlug }) => {
   const siteUrl = "https://marketing-omega-pink.vercel.app/"; // Apni actual domain yahan replace karein
   const fullUrl = `${siteUrl}${urlSlug}`;
 

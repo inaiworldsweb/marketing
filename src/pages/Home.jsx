@@ -72,7 +72,7 @@ const Home = () => {
     <Suspense fallback={<LoadingFallback />}>
 
       <div className="smooth-scroll">
-        <Seo title="Virtual AI Teacher for Students | ED-INAI" description="Study smarter with ED-INAI’s virtual AI teachers. Ask doubts anytime, revise faster & improve exam performance with AI-powered learning." keywords="AI learning for students, virtual AI teacher, AI study platform, online AI learning app, AI doubt solving app, AI exam preparation" urlSlug="/virtual-ai-teacher-for-students" noIndex={true} />
+        <Seo title="India’s First Virtual AI Teachers for Schools & Coaching | ED-INAI" description="Discover India’s first Virtual AI Teachers by ED-INAI. Smart AI-powered teaching solutions for schools and coaching institutes to enhance learning and engagement." keywords="AI teachers for schools, virtual teachers India, AI education platform, AI for colleges, AI coaching software, online AI teaching system" urlSlug="/ai-teachers-for-institutions" /> 
         <Navbar onBookDemo={() => setIsDemoOpen(true)} />
         <HeroSection onBookDemo={() => setIsDemoOpen(true)} />
         <StatsSection />

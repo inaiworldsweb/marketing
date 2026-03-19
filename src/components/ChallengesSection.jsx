@@ -89,7 +89,7 @@ const ChallengesSection = () => {
           </div>
 
           {/* Right side Image */}
-          <div className="relative overflow-hidden rounded-2xl border border-gray-700/30 bg-gray-900/50 aspect-[19/20] flex items-center justify-center">
+          <div className="relative overflow-hidden rounded-2xl border border-gray-700/30 bg-gray-900/50 aspect-[21/20] flex items-center justify-center">
             <img
               src={challengesImage}
               alt="Overcoming Obstacles"

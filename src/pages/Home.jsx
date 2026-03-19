@@ -1,5 +1,6 @@
 import React, { useState, useEffect, lazy, Suspense } from "react";
 import Navbar from "../components/Navbar";
+import Seo from "../components/Seo";
 
 // Lazy load components for better performance
 const HeroSection = lazy(() => import("../components/HeroSection"));
@@ -69,7 +70,9 @@ const Home = () => {
 
   return (
     <Suspense fallback={<LoadingFallback />}>
+
       <div className="smooth-scroll">
+        <Seo title="Virtual AI Teacher for Students | ED-INAI" description="Study smarter with ED-INAI’s virtual AI teachers. Ask doubts anytime, revise faster & improve exam performance with AI-powered learning." keywords="AI learning for students, virtual AI teacher, AI study platform, online AI learning app, AI doubt solving app, AI exam preparation" urlSlug="/virtual-ai-teacher-for-students" noIndex={true} />
         <Navbar onBookDemo={() => setIsDemoOpen(true)} />
         <HeroSection onBookDemo={() => setIsDemoOpen(true)} />
         <StatsSection />
